@@ -1,0 +1,12 @@
+.primaria {
+  color: yellow; }
+
+.secundaria {
+  color: blue; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=main.css.map */

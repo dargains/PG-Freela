@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "main.css",
+  "sources": [
+    "../scss/main.scss",
+    "../scss/layout/_cores.scss",
+    "../scss/layout/_layout.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": "ACIA,SAAS,CAAC;EACN,KAAK,EALM,MAAM,GAIV;;AAIX,WAAW,CAAC;EACR,KAAK,EARQ,IAAI,GAOR;;ACHb,CAAC,CAAA;EACG,OAAO,EAAE,CAAE;EACX,MAAM,EAAE,CAAE;EACV,UAAU,EAAE,UAAW,GAHzB",
+  "names": []
+}
