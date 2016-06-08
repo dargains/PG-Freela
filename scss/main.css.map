@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "file": "main.css",
+  "sources": [
+    "main.scss",
+    "layout/_cores.scss",
+    "layout/_layout.scss",
+    "modules/_portfolio.scss",
+    "modules/_about.scss",
+    "modules/_title-subtitle.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";ACIA,SAAS,CAAC;EACN,KAAK,EALM,GAAG,GAIP;;;AAIX,WAAW,CAAC;EACR,KAAK,EARQ,IAAI,GAOR;;;ACHb,CAAC,CAAA;EACG,OAAO,EAAE,CAAE;EACX,MAAM,EAAE,CAAE;EACV,UAAU,EAAE,UAAW,GAHzB;;;AGJE,UAAU,CAAC,eAAe,CAAV;EACZ,OAAO,EAAE,YAAa;EACtB,UAAU,EAAE,IAAK,GAFJ;;EAGb,UAAU,CAAC,eAAe,CAAC,CAAC,CAA1B;IACE,KAAK,EAAE,MAAO,GADf;;EAIC,UAAU,CAAC,eAAe,CAAC,GAAG,CAAC,EAAE,CAA9B;IACC,SAAS,EAAE,eAAgB;IAC3B,KAAK,EAAE,KAAM,GAFb;;EAIJ,UAAU,CAAC,eAAe,CAAC,GAAG,CAAC,CAAC,CAA9B;IACE,SAAS,EAAE,IAAK,GADjB",
+  "names": []
+}

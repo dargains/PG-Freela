@@ -1,0 +1,30 @@
+/* line 5, /Users/geral/Documents/PG-Freela/scss/layout/_cores.scss */
+.primaria {
+  color: red; }
+
+/* line 9, /Users/geral/Documents/PG-Freela/scss/layout/_cores.scss */
+.secundaria {
+  color: blue; }
+
+/* line 6, /Users/geral/Documents/PG-Freela/scss/layout/_layout.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/* line 2, /Users/geral/Documents/PG-Freela/scss/modules/_title-subtitle.scss */
+.container .title-subtitle {
+  display: inline-block;
+  background: blue; }
+  /* line 5, /Users/geral/Documents/PG-Freela/scss/modules/_title-subtitle.scss */
+  .container .title-subtitle * {
+    color: yellow; }
+  /* line 9, /Users/geral/Documents/PG-Freela/scss/modules/_title-subtitle.scss */
+  .container .title-subtitle row h1 {
+    font-size: 95px !important;
+    float: right; }
+  /* line 13, /Users/geral/Documents/PG-Freela/scss/modules/_title-subtitle.scss */
+  .container .title-subtitle row p {
+    font-size: 18px; }
+
+/*# sourceMappingURL=main.css.map */

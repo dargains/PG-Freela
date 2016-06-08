@@ -1,12 +1,7 @@
 {
-  "version": 3,
-  "file": "main.css",
-  "sources": [
-    "../scss/main.scss",
-    "../scss/layout/_cores.scss",
-    "../scss/layout/_layout.scss"
-  ],
-  "sourcesContent": [],
-  "mappings": "ACIA,SAAS,CAAC;EACN,KAAK,EALM,GAAG,GAIP;;AAIX,WAAW,CAAC;EACR,KAAK,EARQ,IAAI,GAOR;;ACHb,CAAC,CAAA;EACG,OAAO,EAAE,CAAE;EACX,MAAM,EAAE,CAAE;EACV,UAAU,EAAE,UAAW,GAHzB",
-  "names": []
+"version": 3,
+"mappings": "AAIA,SAAU,CACN,KAAK,CALM,GAAG,CAQlB,WAAY,CACR,KAAK,CARQ,IAAI,CCIrB,CAAC,CACG,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,UAAU,CCPtB,0BAAgB,CACZ,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,IAAI,CAChB,4BAAE,CACE,KAAK,CAAE,MAAM,CAGb,iCAAG,CACC,SAAS,CAAE,eAAe,CAC1B,KAAK,CAAE,KAAK,CAEhB,gCAAE,CACE,SAAS,CAAE,IAAI",
+"sources": ["../scss/layout/_cores.scss","../scss/layout/_layout.scss","../scss/modules/_title-subtitle.scss"],
+"names": [],
+"file": "main.css"
 }

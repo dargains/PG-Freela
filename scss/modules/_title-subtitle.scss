@@ -1,0 +1,18 @@
+.container {
+    .title-subtitle {
+        display: inline-block;
+        background: blue;
+        * {
+            color: yellow;
+        }
+        row {
+            h1 {
+                font-size: 95px !important;
+                float: right;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
