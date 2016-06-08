@@ -1,12 +1,19 @@
+/* line 5, /Users/editl41/Desktop/PG-Freela/scss/layout/_cores.scss */
 .primaria {
   color: red; }
 
+/* line 9, /Users/editl41/Desktop/PG-Freela/scss/layout/_cores.scss */
 .secundaria {
   color: blue; }
 
+/* line 6, /Users/editl41/Desktop/PG-Freela/scss/layout/_layout.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
+
+/* line 1, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
+.portfolio {
+  color: yellow; }
 
 /*# sourceMappingURL=main.css.map */
