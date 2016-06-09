@@ -1,18 +1,14 @@
-/* line 5, /Users/editl41/Desktop/PG-Freela/scss/layout/_cores.scss */
 .primaria {
   color: red; }
 
-/* line 9, /Users/editl41/Desktop/PG-Freela/scss/layout/_cores.scss */
 .secundaria {
   color: blue; }
 
-/* line 6, /Users/editl41/Desktop/PG-Freela/scss/layout/_layout.scss */
 * {
   padding: 0;
   margin: 0;
   box-sizing: content-box; }
 
-/* line 10, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
 .portfolio .article-wrapper article {
   width: 400px;
   height: 400px;
@@ -22,14 +18,11 @@
   border: 2px solid red;
   position: relative;
   box-sizing: content-box; }
-  /* line 20, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
   .portfolio .article-wrapper article:hover .subtitle {
     max-height: 100px; }
-  /* line 24, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
   .portfolio .article-wrapper article img {
     width: 100%;
     height: 100%; }
-  /* line 28, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
   .portfolio .article-wrapper article .subtitle {
     max-height: 0px;
     width: 100%;
@@ -41,11 +34,9 @@
     box-sizing: content-box;
     overflow: hidden;
     transition: all 0.2s ease-in-out; }
-    /* line 39, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
     .portfolio .article-wrapper article .subtitle h1 {
       padding: 10px;
       margin: 0; }
-    /* line 43, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
     .portfolio .article-wrapper article .subtitle h2 {
       padding: 5px 10px;
       margin: 0; }
