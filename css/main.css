@@ -39,7 +39,8 @@ h2 {
     position: relative;
     overflow: hidden;
     float: left;
-    cursor: pointer; }
+    cursor: pointer;
+    transform: transale3d(0, 0, 0); }
     .portfolio .article-wrapper article:before {
       padding-top: 100%;
       display: block;
@@ -59,6 +60,7 @@ h2 {
         position: relative;
         width: 100%;
         top: 0;
+        transform: transale3d(0, 0, 0);
         transition: top 5s ease-in-out, -webkit-filter 0.4s ease-in-out; }
       .portfolio .article-wrapper article figure .subtitle {
         max-height: 0px;

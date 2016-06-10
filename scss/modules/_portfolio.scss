@@ -26,6 +26,7 @@
             overflow: hidden;
             float: left;
             cursor: pointer;
+            transform: transale3d(0,0,0);
             &:before {
                 padding-top: 100%;
                 display: block;
@@ -50,6 +51,7 @@
                     position: relative;
                     width: 100%;
                     top: 0;
+                    transform: transale3d(0,0,0);
                     transition: top 5s ease-in-out, -webkit-filter .4s ease-in-out;
                 }
                 .subtitle {
