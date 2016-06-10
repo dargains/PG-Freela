@@ -9,6 +9,12 @@
   margin: 0;
   box-sizing: content-box; }
 
+h1 {
+  text-transform: uppercase; }
+
+h2 {
+  text-transform: uppercase; }
+
 .portfolio ul {
   overflow: hidden;
   position: relative;
@@ -56,12 +62,49 @@
       box-sizing: content-box;
       overflow: hidden;
       transition: all 0.4s ease-in-out; }
-      .portfolio .article-wrapper article .subtitle h1 {
+      .portfolio .article-wrapper article .subtitle h3 {
         padding: 10px;
         margin: 0; }
-      .portfolio .article-wrapper article .subtitle h2 {
+      .portfolio .article-wrapper article .subtitle p {
         padding: 10px 10px;
         margin: 0;
         margin-bottom: 5px; }
+
+.portfolio .popupPortfolio {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+  .portfolio .popupPortfolio .popup-esq {
+    width: 50%;
+    float: left;
+    position: relative; }
+    .portfolio .popupPortfolio .popup-esq img {
+      width: 100%; }
+  .portfolio .popupPortfolio .popup-dir {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    position: relative; }
+    .portfolio .popupPortfolio .popup-dir .wrapper-pop-text {
+      width: 80%;
+      margin: 0 auto;
+      position: relative;
+      transform: translateY(-50%);
+      top: 50%; }
+      .portfolio .popupPortfolio .popup-dir .wrapper-pop-text * {
+        padding: 20px 0; }
+      .portfolio .popupPortfolio .popup-dir .wrapper-pop-text .popup-tags {
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece; }
+    .portfolio .popupPortfolio .popup-dir span {
+      cursor: pointer;
+      position: absolute;
+      top: 40px;
+      right: 50px;
+      font-size: 20px; }
 
 /*# sourceMappingURL=main.css.map */
