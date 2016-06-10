@@ -1,0 +1,27 @@
+.pros {
+    width: 100%;
+    background: #f6f6f6;
+    .wrapper {
+        border-bottom: 1px solid #e5e5e5;
+        article {
+            display: inline-block;
+            border-right: 1px solid #e5e5e5;
+            &:last-child {
+                border-right: none;
+            }
+            div {
+                height: 200px;
+                width: 215px;
+                margin: 80px 20px;
+                margin-bottom: 100px;
+                text-align: center;
+                i {
+                    padding-bottom: 30px;
+                }
+                h1 {
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}

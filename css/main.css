@@ -1,19 +1,2 @@
-/* line 5, /Users/editl41/Desktop/PG-Freela/scss/layout/_cores.scss */
-.primaria {
-  color: red; }
-
-/* line 9, /Users/editl41/Desktop/PG-Freela/scss/layout/_cores.scss */
-.secundaria {
-  color: blue; }
-
-/* line 6, /Users/editl41/Desktop/PG-Freela/scss/layout/_layout.scss */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-/* line 1, /Users/editl41/Desktop/PG-Freela/scss/modules/_portfolio.scss */
-.portfolio {
-  color: yellow; }
-
+.primaria{color:red}.secundaria{color:blue}*{padding:0;margin:0;box-sizing:border-box}.wrapper{margin:0 auto;width:1130px;overflow:hidden}@font-face{font-family:Oswald-Light;src:url("../fonts/Oswald/Oswald-Light.eot");src:url("../fonts/Oswald/Oswald-Light.eot?#iefix") format("embedded-opentype"),url("../fonts/Oswald/Oswald-Light.woff") format("woff"),url("../fonts/Oswald/Oswald-Light.ttf") format("truetype"),url("../fonts/Oswald/Oswald-Light.svg#Oswald-Light") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:Oswald-Regular;src:url("../fonts/Oswald/Oswald-Regular.eot");src:url("../fonts/Oswald/Oswald-Regular.eot?#iefix") format("embedded-opentype"),url("../fonts/Oswald/Oswald-Regular.woff") format("woff"),url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype"),url("../fonts/Oswald/Oswald-Regular.svg#Oswald-Regular") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:OpenSans-Light;src:url("../fonts/OpenSans/OpenSans-Light.eot");src:url("../fonts/OpenSans/OpenSans-Light.eot?#iefix") format("embedded-opentype"),url("../fonts/OpenSans/OpenSans-Light.woff") format("woff"),url("../fonts/OpenSans/OpenSans-Light.ttf") format("truetype"),url("../fonts/OpenSans/OpenSans-Light.svg#OpenSans-Light") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:OpenSans-Regular;src:url("../fonts/OpenSans/OpenSans-Regular.eot");src:url("../fonts/OpenSans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"),url("../fonts/OpenSans/OpenSans-Regular.woff") format("woff"),url("../fonts/OpenSans/OpenSans-Regular.ttf") format("truetype"),url("../fonts/OpenSans/OpenSans-Regular.svg#OpenSans-Regular") format("svg");font-weight:normal;font-style:normal}.portfolio{color:yellow}.pros{width:100%;background:#f6f6f6}.pros .wrapper{border-bottom:1px solid #e5e5e5}.pros .wrapper article{display:inline-block;border-right:1px solid #e5e5e5}.pros .wrapper article:last-child{border-right:none}.pros .wrapper article div{height:200px;width:215px;margin:80px 20px;margin-bottom:100px;text-align:center}.pros .wrapper article div i{padding-bottom:30px}.pros .wrapper article div h1{font-family:"Oswald-Light";font-size:28px;color:#373737;font-weight:normal;letter-spacing:3px;text-transform:uppercase;padding-bottom:15px}.pros .wrapper article div p{line-height:160%;font-family:"OpenSans-Regular";font-size:14px;color:#5e5e5e;font-weight:normal;letter-spacing:1px}.title-subtitle{height:255px;width:100%;background:#f6f6f6}.title-subtitle .wrapper{border-bottom:1px solid #e5e5e5}.title-subtitle .wrapper .left-block,.title-subtitle .wrapper .right-block{float:left;width:50%;background:yellow}.title-subtitle .wrapper .left-block{border-right:1px solid #e5e5e5}.title-subtitle .wrapper .left-block h1{font-family:"Oswald-Light";font-size:90px;color:#373737;font-weight:normal;text-transform:uppercase;text-align:center}.title-subtitle .wrapper .right-block h2{font-family:"OpenSans-Regular";font-size:18px;color:#5e5e5e;font-weight:normal;text-align:center}.pros{width:100%;background:#f6f6f6}.pros .wrapper{border-bottom:1px solid #e5e5e5}.pros .wrapper article{display:inline-block;border-right:1px solid #e5e5e5}.pros .wrapper article:last-child{border-right:none}.pros .wrapper article div{height:200px;width:215px;margin:80px 20px;margin-bottom:100px;text-align:center}.pros .wrapper article div i{padding-bottom:30px}.pros .wrapper article div h1{padding-bottom:15px}
 /*# sourceMappingURL=main.css.map */
