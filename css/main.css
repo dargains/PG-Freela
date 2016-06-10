@@ -7,6 +7,61 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: content-box; }
+
+.portfolio ul {
+  overflow: hidden;
+  position: relative;
+  text-align: center; }
+  .portfolio ul li {
+    position: relative;
+    line-height: 100px;
+    display: inline-block;
+    padding: 0 20px;
+    text-transform: uppercase;
+    color: red;
+    cursor: pointer; }
+    .portfolio ul li:hover {
+      color: blue; }
+
+.portfolio .article-wrapper {
+  width: 100%; }
+  .portfolio .article-wrapper article {
+    width: 25%;
+    height: 475px;
+    position: relative;
+    position: relative;
+    box-sizing: content-box;
+    overflow: hidden;
+    float: left;
+    cursor: pointer; }
+    .portfolio .article-wrapper article:hover .subtitle {
+      max-height: 110px; }
+    .portfolio .article-wrapper article:hover img {
+      top: -1000px;
+      -webkit-filter: brightness(50%); }
+    .portfolio .article-wrapper article img {
+      position: relative;
+      width: 100%;
+      top: 0;
+      transition: top 5s ease-in-out, -webkit-filter 0.4s ease-in-out; }
+    .portfolio .article-wrapper article .subtitle {
+      max-height: 0px;
+      width: 100%;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      background-color: #fff;
+      border-top: 5px solid rgba(0, 0, 0, 0.8);
+      box-sizing: content-box;
+      overflow: hidden;
+      transition: all 0.4s ease-in-out; }
+      .portfolio .article-wrapper article .subtitle h1 {
+        padding: 10px;
+        margin: 0; }
+      .portfolio .article-wrapper article .subtitle h2 {
+        padding: 10px 10px;
+        margin: 0;
+        margin-bottom: 5px; }
 
 /*# sourceMappingURL=main.css.map */
