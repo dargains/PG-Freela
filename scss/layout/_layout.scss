@@ -24,6 +24,7 @@ $mobile: 512px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1280px;
+
 @mixin mobile {
     @media (min-width: 0px) and (max-width: #{$mobile}) {
         @content;

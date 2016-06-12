@@ -77,8 +77,14 @@
                 }
             }
             //article
-            @include small {
+            @include laptop {
                 width: 50%;
+            }
+            @include tablet {
+                width: 50%;
+            }
+            @include mobile {
+                width: 100%;
             }
         }
     }
@@ -89,6 +95,7 @@
         top: 0;
         left: 0;
         overflow: hidden;
+        z-index: 999;
         .popup-esq {
             width: 50%;
             float: left;
