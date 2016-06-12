@@ -1,0 +1,30 @@
+.title-subtitle {
+    width: 100%;
+    background: $bg;
+    overflow: hidden;
+    .wrapper {
+        border-bottom: 1px solid $gray-1;
+        position: relative;
+        //
+        .left-block,
+        .right-block {
+            display: inline-block;
+            width: 45%;
+            padding: 60px 20px;
+        }
+        .left-block {
+            border-right: 1px solid $gray-1;
+            h1 {
+                @include font("Oswald-Light", 90px, $black-1, normal);
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+        .right-block {
+            h2 {
+                @include font("OpenSans-Regular", 18px, $black-3, normal);
+                text-align: center;
+            }
+        }
+    }
+}

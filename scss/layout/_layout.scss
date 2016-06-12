@@ -1,23 +1,47 @@
+//mixins
+@mixin font($ffamily, $fsize, $color, $fw) {
+    font-family: $ffamily;
+    font-size: $fsize;
+    color: $color;
+    font-weight: $fw;
+}
+
+@mixin font-face($font-family, $file-path, $font-weight, $font-style) {
+    @font-face {
+        font-family: $font-family;
+        src: url('#{$file-path}.eot');
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+        url('#{$file-path}.woff') format('woff'),
+        url('#{$file-path}.ttf') format('truetype'),
+        url('#{$file-path}.svg##{$font-family}') format('svg');
+        font-weight: $font-weight;
+        font-style: $font-style;
+    }
+}
+
+//responsive
 $mobile: 512px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1280px;
-
 @mixin mobile {
     @media (min-width: 0px) and (max-width: #{$mobile}) {
         @content;
     }
 }
+
 @mixin tablet {
     @media (min-width: #{$mobile+1px}) and (max-width: #{$tablet}) {
         @content;
     }
 }
+
 @mixin laptop {
     @media (min-width: #{$tablet+1px}) and (max-width: #{$laptop}) {
         @content;
     }
 }
+
 @mixin desktop {
     @media (min-width: #{$laptop+1px}) and (max-width: #{$desktop}) {
         @content;
@@ -31,7 +55,7 @@ $desktop: 1280px;
 }
 
 //reset
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: content-box;
@@ -45,10 +69,13 @@ h1 {
     text-transform: uppercase;
 }
 
-h2 {
-    text-transform: uppercase;
+.wrapper {
+    margin: 0 auto;
+    width: 1130px;
+    overflow: hidden;
 }
 
+<<<<<<< HEAD
 .btn {
     display: inline-block;
     line-height: 50px;
@@ -58,3 +85,12 @@ h2 {
     text-transform: uppercase;
     text-decoration: none;
 }
+=======
+address {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+>>>>>>> e4c717852c8830acedde847cd6615f2746e6721b

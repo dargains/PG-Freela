@@ -1,0 +1,38 @@
+.pros {
+    width: 100%;
+    background: $bg;
+    .wrapper {
+        border-bottom: 1px solid $gray-1;
+        article {
+            display: inline-block;
+            border-right: 1px solid $gray-1;
+            &:first-child {
+                margin-left: 1px;
+            }
+            &:last-child {
+                border-right: none;
+            }
+            div {
+                height: 200px;
+                width: 215px;
+                margin: 80px 28px;
+                margin-bottom: 100px;
+                text-align: center;
+                i {
+                    padding-bottom: 30px;
+                }
+                h1 {
+                    @include font("Oswald-Light", 28px, $black-1, normal);
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    padding-bottom: 15px;
+                }
+                p {
+                    line-height: 160%;
+                    @include font("OpenSans-Regular", 14px, $black-3, normal);
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}

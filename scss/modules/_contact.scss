@@ -1,0 +1,91 @@
+.contact {
+    background: $bg;
+    padding: 40px 0;
+    overflow: hidden;
+    .wrapper {
+        .contact-details {
+            background: transparent;
+            text-align: left;
+            float: left;
+            padding: 20px 0;
+            width: 45%;
+            h1 {
+                @include font("OpenSans-Bold", 15px, $black-1, normal);
+            }
+            h2,
+            address {
+                @include font("OpenSans-Regular", 13px, $black-3, normal);
+                margin: 10px 0;
+                line-height: 160%;
+            }
+            article.reach-us {
+                width: 350px;
+                margin-bottom: 60px;
+            }
+            address {
+                margin-bottom: 60px;
+            }
+            ul {
+                li {
+                    margin: 10px 0;
+                    &::after {
+                        content: '';
+                        display: block;
+                        background: $gray-1;
+                        margin: 15px 0;
+                        margin-left: 2px;
+                        width: 90%;
+                        height: 1px;
+                    }
+                    &:last-child {
+                        &::after {
+                            width: 0;
+                            height: 0;
+                        }
+                    }
+                    i {
+                        margin-right: 30px;
+                    }
+                    span {
+                        &,
+                        * {
+                            @include font("OpenSans-Regular", 15px, $black-2, normal);
+                        }
+                    }
+                }
+            }
+        }
+        /* ------ FORM ----*/
+        .send-message {
+            width: 50%;
+            float: right;
+            textarea {
+                height: 165px;
+            }
+            input:not([type="submit"]),
+            textarea {
+                @include font("OpenSans-Regular", 13px, $black-2, normal);
+                line-height: 40px;
+                padding-left: 20px;
+                width: 100%;
+                margin: 20px 0;
+                outline: 0;
+                border: none;
+                border-bottom: 1px solid $gray-1;
+            }
+            input:focus,
+            textarea:focus {
+                @include font("OpenSans-Regular", 13px, $black-2, normal);
+            }
+            /* Todos inputs menos o botão submit */
+            input:not([type="submit"]) {
+                line-height: 40px;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+.fix-margin {
+    margin-left: 10px;
+}
