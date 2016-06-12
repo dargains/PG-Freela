@@ -176,7 +176,8 @@ h2 {
     z-index: 4;
     position: absolute;
     color: #cecece;
-    animation: hero-down 2s infinite; }
+    animation: hero-down 2s infinite;
+    cursor: pointer; }
 
 @-webkit-keyframes hero-down {
   0% {
