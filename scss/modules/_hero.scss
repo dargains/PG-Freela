@@ -49,6 +49,10 @@
         animation: hero-down 2s infinite;
         cursor: pointer;
     }
+    #hero-end {
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 @-webkit-keyframes hero-down {
