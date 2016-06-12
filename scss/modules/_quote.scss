@@ -1,26 +1,22 @@
-.pros {
+.quote {
     width: 100%;
     background: #f6f6f6;
     .wrapper {
-        border-bottom: 1px solid #e5e5e5;
-        article {
-            display: inline-block;
-            border-right: 1px solid #e5e5e5;
-            &:last-child {
-                border-right: none;
-            }
-            div {
-                height: 200px;
-                width: 215px;
-                margin: 80px 20px;
-                margin-bottom: 100px;
+        div {
+            width: 80%;
+            margin: 0 auto;
+            padding: 80px 0;
+            h1 {
+                margin: 0 auto;
+                width: 50%;
+                @include font("Oswald-Regular", 28px, $black-1, normal);
+                text-transform: none;
                 text-align: center;
-                i {
-                    padding-bottom: 30px;
-                }
-                h1 {
-                    padding-bottom: 15px;
-                }
+                padding-bottom: 40px;
+            }
+            a {
+                display: block;
+                text-align: center;
             }
         }
     }

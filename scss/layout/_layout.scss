@@ -19,6 +19,7 @@
     }
 }
 
+//responsive
 $mobile: 512px;
 $tablet: 768px;
 $laptop: 1024px;
@@ -53,7 +54,6 @@ $desktop: 1280px;
     }
 }
 
-//responsive
 //reset
 * {
     padding: 0;
@@ -75,6 +75,6 @@ address {
     font-style: normal;
 }
 
-a{
+a {
     text-decoration: none;
 }
