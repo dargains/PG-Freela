@@ -1,17 +1,18 @@
 $(document).ready(function () {
-    $(".popupPortfolio").hide();
+    //$(".popupPortfolio").hide();
 
     $("article").click(function () {
         var html = $('html');
         $(".popupPortfolio").show();
-        //trava o scroll
+        $(".popupPortfolio").css("top", Math.max(0, (($(window).height() - $($(".popupPortfolio")).outerHeight()) / 2) +
+        $(window).scrollTop()) + "px");
+        $(".popupPortfolio").css("left", Math.max(0, (($(window).width() - $($(".popupPortfolio")).outerWidth()) / 2) +
+        $(window).scrollLeft()) + "px");
         disableScroll();
-
     });
 
     $(".closePortfolio").click(function () {
         $(".popupPortfolio").hide();
-        //libera o scroll
         enableScroll();
     });
 
