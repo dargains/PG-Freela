@@ -121,4 +121,14 @@ h2 {
       right: 50px;
       font-size: 20px; }
 
+.hero {
+  background-image: url(../images/hero.jpg);
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .hero .wrapper-hero {
+    text-align: center; }
+
 /*# sourceMappingURL=main.css.map */
