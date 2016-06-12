@@ -35,6 +35,10 @@ $desktop: 1280px;
     padding: 0;
     margin: 0;
     box-sizing: content-box;
+    position: relative;
+}
+html, body {
+    height: 100%;
 }
 
 h1 {

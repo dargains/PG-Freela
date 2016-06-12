@@ -7,7 +7,11 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+  position: relative; }
+
+html, body {
+  height: 100%; }
 
 h1 {
   text-transform: uppercase; }
@@ -122,13 +126,32 @@ h2 {
       font-size: 20px; }
 
 .hero {
-  background-image: url(../images/hero.jpg);
-  background-position: center center;
-  background-size: cover;
   width: 100%;
-  height: 100%;
-  position: relative; }
+  height: 100%; }
+  .hero .mask-hero {
+    background-image: url(../images/hero.jpg);
+    background-position: center center;
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0; }
   .hero .wrapper-hero {
+    z-index: 5;
+    position: relative;
+    width: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
     text-align: center; }
+    .hero .wrapper-hero h1 {
+      background-color: red;
+      display: inline-block;
+      line-height: 30px; }
+    .hero .wrapper-hero h2 {
+      color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
