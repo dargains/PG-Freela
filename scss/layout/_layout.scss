@@ -19,16 +19,62 @@
     }
 }
 
+$mobile: 512px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
+@mixin mobile {
+    @media (min-width: 0px) and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$mobile+1px}) and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: #{$tablet+1px}) and (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$laptop+1px}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+@mixin small {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
 //responsive
 //reset
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 .wrapper {
     margin: 0 auto;
     width: 1130px;
     overflow: hidden;
+}
+
+address {
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
 }
