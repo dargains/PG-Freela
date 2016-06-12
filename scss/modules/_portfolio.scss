@@ -76,6 +76,10 @@
                     }
                 }
             }
+            //article
+            @include small {
+                width: 50%;
+            }
         }
     }
     .popupPortfolio {
