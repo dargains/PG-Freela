@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     $(".hero-down").click(function(){
         $('html,body').animate({
-        scrollTop: $('#bla').offset().top}, 'slow');
+        scrollTop: $('#hero-end').offset().top}, 'slow');
     })
 
     var scrollPosition = [
