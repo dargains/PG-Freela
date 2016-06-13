@@ -110,6 +110,7 @@ $desktop: 1280px;
 html,
 body {
     height: 100%;
+    
 }
 
 h1 {
@@ -145,4 +146,9 @@ address {
 
 a {
     text-decoration: none;
+}
+
+.content{
+    height: 100%;
+
 }
