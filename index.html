@@ -26,10 +26,11 @@
     <!--STYLE-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!--    BOOTSTRAP -->
-
+    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
     <!--    Font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <!--    <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">-->
+
+
     <script>
         (function (b, o, i, l, e, r) {
             b.GoogleAnalyticsObject = l;
@@ -53,61 +54,73 @@
     <div class="about">
 
         <section class="title-subtitle">
-            <div class="wrapper">
-                <div class="left-block">
-                    <h1>Sobre nós</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="left-block col-sm-6 col-xs-12">
+                        <h1>Sobre nós</h1>
+                    </div>
+
+                    <div class="right-block col-sm-6 col-xs-12">
+                        <h2>Somos uma equipa de desevolvedores localizados em Lisboa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero!</h2>
+                    </div>
                 </div>
-                <div class="right-block">
-                    <h2>Somos uma equipa de desevolvedores localizados em Lisboa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero!</h2>
-                </div>
+
             </div>
         </section>
 
         <section class="pros">
-            <div class="wrapper">
+            <div class="container">
                 <!-- (article>div>i+h1{Hello}+p{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.})*4-->
-                <article>
-                    <div>
-                        <i class="fa fa-camera-retro fa-4x"></i>
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <i class="fa fa-camera-retro fa-4x"></i>
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <i class="fa fa-camera-retro fa-4x"></i>
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
-                    </div>
-                </article>
-                <article>
-                    <div>
-                        <i class="fa fa-camera-retro fa-4x"></i>
-                        <h1>Hello</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
-                    </div>
-                </article>
+                <div class="row">
+                    <article class="col-md-3 col-sm-6">
+                        <div>
+                            <i class="fa fa-camera-retro fa-4x"></i>
+                            <h1>Hello</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
+                        </div>
+                    </article>
+
+                    <article class="col-md-3 col-sm-6">
+                        <div>
+                            <i class="fa fa-camera-retro fa-4x"></i>
+                            <h1>Hello</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
+                        </div>
+                    </article>
+
+
+                    <article class="col-md-3 col-sm-6">
+                        <div>
+                            <i class="fa fa-camera-retro fa-4x"></i>
+                            <h1>Hello</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
+                        </div>
+                    </article>
+
+                    <article class="col-md-3 col-sm-6">
+                        <div>
+                            <i class="fa fa-camera-retro fa-4x"></i>
+                            <h1>Hello</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.</p>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
         <section class="quote">
-            <div class="wrapper">
-                <div>
-                    <h1>We grow brands by making decisions that are rooted in business strategy.</h1>
-                    <a href="" class="btn btn-primary btn-primary-black">Let's work together</a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>We grow brands by making decisions that are rooted in business strategy.</h1>
+                        <a href="" class="btn btn-primary btn-primary-black">Let's work together</a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <section class="portfolio">
+    <!--<section class="portfolio">
         <ul>
             <li>All</li>
             <li>Design</li>
@@ -170,86 +183,56 @@
                 <span class="closePortfolio">X</span>
             </div>
         </div>
-    </section>
-
-    <aside class="contact">
-        <div class="wrapper">
-            <div class="contact-details">
-                <article class="reach-us">
-                    <h1>Lorem ipsum dolor.</h1>
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, velit repellat fugit voluptate incidunt libero!</h2>
-                </article>
-
-                <article>
-                    <h1>Our address</h1>
-                    <address>sLorem ipsum dolor.<br/> </address>
-                </article>
-
-                <ul>
-                    <li><i class="fa fa-phone"></i><span class="fix-margin">123123123</span></li>
-                    <li><i class="fa fa-envelope-o "></i><span><a href="#">123123123</a></span></li>
-                    <li><i class="fa fa-skype"></i><span class="fix-margin"><a href="#">12312321</a></span></li>
-                </ul>
-            </div>
-
-            <form action="#" class="send-message">
-                <input type="text" name="name" placeholder="Your name *" />
-                <input type="email" name="email" placeholder="Your e-mail *" />
-                <textarea name="message" placeholder="Your message"></textarea>
-                <input type="submit">
-            </form>
-        </div>
-    </aside>
+    </section>-->
 
     <section class="contact-us">
         <section class="title-subtitle">
+            <div class="container">
+                <div class="row">
+                    <div class="left-block col-sm-6 col-xs-12">
+                        <h1>Sobre nós</h1>
+                    </div>
 
+                    <div class="right-block col-sm-6 col-xs-12">
+                        <h2>Somos uma equipa de desevolvedores localizados em Lisboa Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero!</h2>
+                    </div>
+                </div>
 
-            <div class="wrapper">
-                <div class="left-block">
-                    <h1>loremx</h1>
-                </div>
-                <div class="right-block">
-                    <h2>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda sit laborum, dicta praesentium temporibus impedit.</h2>
-                </div>
             </div>
-
-
         </section>
 
-        <aside class="contact">
-            <div class="wrapper">
-                <div class="contact-details">
-                    <article class="reach-us">
-                        <h1>How to reach us</h1>
-                        <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
-                    </article>
+        <section class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-details col-md-6 col-xs-6">
+                        <article class="reach-us">
+                            <h1>How to reach us</h1>
+                            <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h2>
+                        </article>
 
-                    <article>
-                        <h1>Nosso Endereço</h1>
-                        <address>Sturlly Technologies <br/>
-                    PO Box 16122, Collins Street West, <br/>
-                    Victoria 8007, United States.</address>
-                    </article>
+                        <article>
+                            <h1>Nosso Endereço</h1>
+                            <address>Sturlly Technologies <br/>
+                        PO Box 16122, Collins Street West, <br/>
+                        Victoria 8007, United States.</address>
+                        </article>
 
-                    <ul>
-                        <li><i class="fa fa-phone"></i><span class="align-fix">123123123123</span></li>
-                        <li><i class="fa fa-envelope"></i><a href="#"><span>123123123123</span></a></li>
-                        <li><i class="fa fa-skype"></i><a href="#"><span class="align-fix">1239712371</span></a></li>
-                    </ul>
+                        <ul>
+                            <li><i class="fa fa-phone"></i><span class="align-fix">123123123123</span></li>
+                            <li><i class="fa fa-envelope"></i><a href="#"><span>123123123123</span></a></li>
+                            <li><i class="fa fa-skype"></i><a href="#"><span class="align-fix">1239712371</span></a></li>
+                        </ul>
+                    </div>
+
+                    <form class="send-message col-md-6 col-xs-6">
+                        <input type="text" name="nome" placeholder="Teu nome *">
+                        <input type="email" name="nome" placeholder="Teu e-mail *">
+                        <textarea name="msg" placeholder="Mensagem"></textarea>
+                        <input type="submit">
+                    </form>
                 </div>
-
-                <form class="send-message">
-                    <input type="text" name="nome" placeholder="Teu nome *">
-                    <input type="email" name="nome" placeholder="Teu e-mail *">
-                    <textarea name="msg" placeholder="Mensagem"></textarea>
-                    <input type="submit">
-                </form>
             </div>
-
-        </aside>
-
-
+        </section>
 
     </section>
 

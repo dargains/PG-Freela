@@ -94,7 +94,12 @@ $title-subtitle: 1112px;
             @content
         }
     }
-        @else if ($point==xs-all) {
+    @else if ($point==xs-all) {
+        @media (max-width: 767px) {
+            @content
+        }
+    }
+    @else if ($point==xxs-all) {
         @media (max-width: 640px) {
             @content
         }

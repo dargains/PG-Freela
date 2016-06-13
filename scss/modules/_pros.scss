@@ -4,15 +4,13 @@
     .container {
         article {
             border-right: 1px solid $gray-1;
+            border-bottom: 1px solid $gray-1;
             @include breakpoint(sm) {
                 border-bottom: 1px solid $gray-1;
                 
                 &:nth-child(2) {
                     border-right: none;
                 }
-            }
-            @include breakpoint(xs) {
-                border-bottom: 1px solid $gray-1;
             }
             @include breakpoint(xs-all) {
                 border-bottom: 1px solid $gray-1;

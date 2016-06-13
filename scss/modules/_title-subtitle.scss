@@ -19,18 +19,14 @@
                     padding-top: 5px;
                     padding-right: 30px;
                 }
-                @include breakpoint(xs) {
+                @include breakpoint(xs-all) {
+                    font-size: 65px;
                     margin: 0;
                     padding: 20px 0;
+                    padding-top: 40px;
                 }
-                @include breakpoint(xxs) {
-                    margin: 0;
-                    padding: 20px 0;
-                }
-                @include breakpoint(xxxs) {
-                    margin: 0;
-                    padding: 20px 0;
-                }
+
+
             }
         }
         .right-block {
@@ -47,16 +43,12 @@
                     padding: 20px 0;
                     text-align: center;
                 }
-                @include breakpoint(xxs) {
+                @include breakpoint(xxs-all) {
                     margin: 0;
                     padding: 20px 0;
                     text-align: center;
                 }
-                @include breakpoint(xxxs) {
-                    margin: 0;
-                    padding: 20px 0;
-                    text-align: center;
-                }
+
             }
         }
     }
