@@ -1,9 +1,11 @@
 $(document).ready(function () {
     $(".popupPortfolio").hide();
 
-    $("article").click(function () {
-        var html = $('html');
+    $(".itemPortfolio").click(function () {
+        var index = $(".itemPortfolio").index(this) + 1,
+            itemPop = $(".popupPortfolio" + index);
         $(".popupPortfolio").show();
+        itemPop.show();
         $(".popupPortfolio").css("top", Math.max(0, (($(window).height() - $($(".popupPortfolio")).outerHeight()) / 2) +
         $(window).scrollTop()) + "px");
         $(".popupPortfolio").css("left", Math.max(0, (($(window).width() - $($(".popupPortfolio")).outerWidth()) / 2) +
@@ -12,6 +14,7 @@ $(document).ready(function () {
     });
 
     $(".closePortfolio").click(function () {
+        $(this).parent().parent().hide();
         $(".popupPortfolio").hide();
         enableScroll();
     });
