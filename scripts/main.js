@@ -71,25 +71,46 @@ $(document).ready(function () {
 
     // elements
     var $page = $('.single');
-
+    var lastPos = undefined;
+    var menuOpen = false;
 
     $('.menu_toggle').on('click', function () {
         $page.toggleClass('shazam');
+        var t = $(window).scrollTop();
+        menuOpen = !menuOpen;
+        lastPos = $(window).scrollTop();
+
+        console.log("Last pos is: " + menuOpen);
+
+
+        //When animation is over
+        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
+            , function () {
+/*
+                    $('html,body').animate({
+
+              scrollTop: $('#hero-end').offset() + 200
+        }, 'slow');
+*/
+
+
+            });
 
     });
+
     $('.content').on('click', function () {
         $page.removeClass('shazam');
 
+
     });
 
-    var screenHeight = $(window).height();
 
-    $('.single').css('height', screenHeight + 'px');
+
+
+    /* ----------- MISC -------------- */
 
     /* URL bar resize fix for mobile */
-    if (mobileFix) {
-
-    }
-
+    var screenHeight = $(window).height();
+    $('.single').css('height', screenHeight + 'px');
 
 });
