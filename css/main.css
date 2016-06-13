@@ -241,10 +241,8 @@ a {
     bottom: 30px; } }
 .portfolio ul {
   overflow: hidden;
-  position: relative;
   text-align: center; }
   .portfolio ul li {
-    position: relative;
     line-height: 100px;
     display: inline-block;
     padding: 0 20px;
@@ -256,11 +254,9 @@ a {
 .portfolio .article-wrapper {
   width: 100%;
   height: 80%;
-  position: relative;
   overflow: hidden; }
   .portfolio .article-wrapper article {
     width: 25%;
-    position: relative;
     overflow: hidden;
     float: left;
     cursor: pointer;
@@ -322,22 +318,26 @@ a {
   left: 0;
   overflow: hidden;
   z-index: 999; }
+  .popupPortfolio > * {
+    display: none;
+    height: 100%; }
   .popupPortfolio .popup-esq {
     width: 50%;
-    float: left;
-    position: relative; }
+    float: left; }
     .popupPortfolio .popup-esq img {
       width: 100%; }
+    @media (min-width: 0px) and (max-width: 512px) {
+      .popupPortfolio .popup-esq {
+        width: 100%;
+        height: 50%; } }
   .popupPortfolio .popup-dir {
     width: 50%;
     height: 100%;
     float: left;
-    background-color: #fff;
-    position: relative; }
+    background-color: #fff; }
     .popupPortfolio .popup-dir .wrapper-pop-text {
       width: 80%;
       margin: 0 auto;
-      position: relative;
       transform: translateY(-50%);
       top: 50%; }
       .popupPortfolio .popup-dir .wrapper-pop-text * {
@@ -351,6 +351,11 @@ a {
       top: 40px;
       right: 50px;
       font-size: 20px; }
+    @media (min-width: 0px) and (max-width: 512px) {
+      .popupPortfolio .popup-dir {
+        width: 100%;
+        height: 50%;
+        font-size: 12px; } }
 
 .pros {
   width: 100%;
