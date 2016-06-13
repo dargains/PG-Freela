@@ -60,7 +60,9 @@ function enableScroll() {
     document.onkeydown = null;
 }
 
+
 /* ~~~~~~~~~~~ HEADER ~~~~~~~~~~~~ */
+
 // elements
 var $page = $('.single');
 
