@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //$(".popupPortfolio").hide();
+    $(".popupPortfolio").hide();
 
     $("article").click(function () {
         var html = $('html');
