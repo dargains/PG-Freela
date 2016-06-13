@@ -94,6 +94,11 @@ $title-subtitle: 1112px;
             @content
         }
     }
+        @else if ($point==xs-all) {
+        @media (max-width: 640px) {
+            @content
+        }
+    }
 }
 
 //reset
@@ -102,6 +107,7 @@ $title-subtitle: 1112px;
     margin: 0;
     box-sizing: content-box;
     position: relative;
+    list-style: none;
 }
 
 html,

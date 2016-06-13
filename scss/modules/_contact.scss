@@ -2,15 +2,27 @@
     background: $bg;
     padding: 40px 0;
     overflow: hidden;
-    .wrapper {
+    .container {
         .contact-details {
             background: transparent;
             text-align: left;
-            float: left;
             padding: 20px 0;
-            width: 45%;
+            @include breakpoint(xs) {
+                padding: 20px 20px;
+            }
+            @include breakpoint(xs-all) {
+                width: 100%;
+                text-align: center;
+                padding: 20px 20px;
+            }
             h1 {
                 @include font("OpenSans-Bold", 15px, $black-1, normal);
+                margin-top: 0;
+            }
+            h2 {
+                @include breakpoint(xs) {
+                    width: 80%;
+                }
             }
             h2,
             address {
@@ -19,7 +31,6 @@
                 line-height: 160%;
             }
             article.reach-us {
-                width: 350px;
                 margin-bottom: 60px;
             }
             address {
@@ -58,7 +69,10 @@
         /* ------ FORM ----*/
         .send-message {
             width: 50%;
-            float: right;
+            text-align: center;
+            @include breakpoint(xs-all) {
+                width: 100%;
+            }
             textarea {
                 height: 165px;
             }
