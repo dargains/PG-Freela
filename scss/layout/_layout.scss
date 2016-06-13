@@ -11,7 +11,7 @@
         font-family: $font-family;
         src: url('#{$file-path}.eot');
         src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-        url('#{$file-path}.woff') format('woff'),
+        //url('#{$file-path}.woff') format('woff'),
         url('#{$file-path}.ttf') format('truetype'),
         url('#{$file-path}.svg##{$font-family}') format('svg');
         font-weight: $font-weight;
@@ -24,8 +24,6 @@ $mobile: 512px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1280px;
-//title-subtitle custom breakpoints
-$title-subtitle: 1112px;
 @mixin mobile {
     @media (min-width: 0px) and (max-width: #{$mobile}) {
         @content;
@@ -52,12 +50,6 @@ $title-subtitle: 1112px;
 
 @mixin small {
     @media (max-width: #{$laptop}) {
-        @content;
-    }
-}
-
-@mixin title-subtitle {
-    @media (max-width: #{$title-subtitle}) {
         @content;
     }
 }
