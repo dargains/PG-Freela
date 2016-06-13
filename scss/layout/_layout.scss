@@ -24,6 +24,8 @@ $mobile: 512px;
 $tablet: 768px;
 $laptop: 1024px;
 $desktop: 1280px;
+//title-subtitle custom breakpoints
+$title-subtitle: 1112px;
 @mixin mobile {
     @media (min-width: 0px) and (max-width: #{$mobile}) {
         @content;
@@ -51,6 +53,46 @@ $desktop: 1280px;
 @mixin small {
     @media (max-width: #{$laptop}) {
         @content;
+    }
+}
+
+@mixin title-subtitle {
+    @media (max-width: #{$title-subtitle}) {
+        @content;
+    }
+}
+
+//Bootstrap breakpoints
+@mixin breakpoint($point) {
+    @if ($point==lg) {
+        @media (min-width: 1200px) {
+            @content
+        }
+    }
+    @else if ($point==md) {
+        @media (min-width: 992px) and (max-width: 1199px) {
+            @content
+        }
+    }
+    @else if ($point==sm) {
+        @media (min-width: 768px) and (max-width: 991px) {
+            @content
+        }
+    }
+    @else if ($point==xs) {
+        @media (max-width: 767px) and (min-width: 641px) {
+            @content
+        }
+    }
+    @else if ($point==xxs) {
+        @media (max-width: 640px) and (min-width: 481px) {
+            @content
+        }
+    }
+    @else if ($point==xxxs) {
+        @media (max-width: 480px) {
+            @content
+        }
     }
 }
 
