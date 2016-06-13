@@ -59,3 +59,14 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
+
+/* ~~~~~~~~~~~ HEADER ~~~~~~~~~~~~ */
+// elements
+var $page = $('.single');
+
+$('.menu_toggle').on('click', function(){
+  $page.toggleClass('shazam');
+});
+$('.content').on('click', function(){
+  $page.removeClass('shazam');
+});
