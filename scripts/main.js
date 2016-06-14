@@ -69,6 +69,16 @@ $(document).ready(function () {
 
     /* ~~~~~~~~~~~ HEADER ~~~~~~~~~~~~ */
 
+    function scrollViewTo(target, callback) {
+        var duration, pos;
+        pos = $body.scrollTop();
+        duration = ((Math.abs(pos - target) / 1000) * 1000);
+
+        $("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: target + 'px'
+        }, duration, callback);
+    }
+
     // elements
     var $page = $('.single');
     var lastPos = undefined;
@@ -82,28 +92,71 @@ $(document).ready(function () {
 
         console.log("Last pos is: " + menuOpen);
 
-
         //When animation is over
         $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
             , function () {
-/*
-                    $('html,body').animate({
-
-              scrollTop: $('#hero-end').offset() + 200
-        }, 'slow');
-*/
-
 
             });
-
     });
 
     $('.content').on('click', function () {
         $page.removeClass('shazam');
-
-
     });
 
+    //    /* scroll to About */
+    $('#menu-about').on('click', function () {
+
+        $page.removeClass('shazam');
+
+
+        $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+
+            $('html, body').stop();
+        });
+
+        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
+            , function () {
+
+                $('html, body').stop(true, false).animate({
+                    scrollTop: $("#hero-end").offset().top
+                }, 1500, function () {
+                    $('html, body').off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+                    $('html, body').stop();
+                });
+
+
+            });
+    });
+    //
+    //    /* scroll to Portfolio */
+    //    $('#menu-portfolio').on('click', function () {
+    //
+    //        $page.removeClass('shazam');
+    //
+    //
+    //        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
+    //            , function () {
+    //                $('html, body').animate({
+    //                    scrollTop: $("#portfolio-start").offset().top
+    //                }, 1500);
+    //
+    //            });
+    //    })
+    //
+    //    /* scroll to Contact */
+    //    $('#menu-contact').on('click', function () {
+    //
+    //        $page.removeClass('shazam');
+    //
+    //
+    //        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
+    //            , function () {
+    //                $('html, body').animate({
+    //                    scrollTop: $("#contact-start").offset().top
+    //                }, 1500);
+    //
+    //            });
+    //    })
 
 
 
@@ -112,5 +165,7 @@ $(document).ready(function () {
     /* URL bar resize fix for mobile */
     var screenHeight = $(window).height();
     $('.single').css('height', screenHeight + 'px');
+
+
 
 });

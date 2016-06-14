@@ -63,9 +63,9 @@
         </span>
         <nav>
             <ul class="menu_items">
-                <li><a href="#"><i class="icon fa fa-signal fa-2x"></i> Moar</a></li>
-                <li><a href="#"><i class="icon fa fa-coffee fa-2x"></i> Coffee</a></li>
-                <li><a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
+                <li id="menu-about"><a href="#"><i class="icon fa fa-signal fa-2x"></i>Sobre nós</a></li>
+                <li id="menu-portfolio"><a href="#"><i class="icon fa fa-coffee fa-2x"></i>Portfólio</a></li>
+                <li id="menu-contact"><a href="#"><i class="icon fa fa-heart fa-2x"></i> Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -87,6 +87,7 @@
 
         <!--         ABOUT START -->
         <section class="about">
+            <span id="about-start"></span>
             <section class="title-subtitle">
                 <div class="container">
                     <div class="row">
@@ -152,16 +153,17 @@
 
                 </div>
             </section>
-            
+
 
         </section>
 
         <!-- PORTFOLIO START -->
         <section class="portfolio">
+            <span id="portfolio-start"></span>
             <div class="article-wrapper">
                 <article>
                     <figure>
-                        <img src="../images/template1.jpg" alt="">
+                        <img src="images/template1.jpg" alt="">
                         <div class="subtitle">
                             <h3 class="primaria">Imagem 1</h3>
                             <p>Subtitle da imagem</p>
@@ -170,7 +172,7 @@
                 </article>
                 <article>
                     <figure>
-                        <img src="../images/template2.jpg" alt="">
+                        <img src="images/template2.jpg" alt="">
                         <div class="subtitle">
                             <h3 class="primaria">Imagem 2</h3>
                             <p>Subtitle da imagem</p>
@@ -179,7 +181,7 @@
                 </article>
                 <article>
                     <figure>
-                        <img src="../images/template3.jpg" alt="">
+                        <img src="images/template3.jpg" alt="">
                         <div class="subtitle">
                             <h3 class="primaria">Imagem 3</h3>
                             <p>Subtitle da imagem</p>
@@ -188,7 +190,7 @@
                 </article>
                 <article>
                     <figure>
-                        <img src="../images/template4.jpg" alt="">
+                        <img src="images/template4.jpg" alt="">
                         <div class="subtitle">
                             <h3 class="primaria">Imagem 4</h3>
                             <p>Subtitle da imagem</p>
@@ -214,8 +216,10 @@
                 <img src="../images/template1.jpg" alt="">
             </div>
         </div>
-
+        <!-- PORTFOLIO END -->
+        
         <section class="contact">
+            <span id="contact-start"></span>
             <div class="container">
                 <div class="row">
                     <div class="contact-details col-md-6 col-xs-6">
@@ -251,13 +255,15 @@
 
 
     </div>
-    <!-- PORTFOLIO END -->
+
 
 
 
     <!--SCRIPT-->
     <script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
+     <script type="text/javascript" src="snap.min.js"></script>
     <script src="scripts/main.js"></script>
+    
 </body>
 
 </html>
