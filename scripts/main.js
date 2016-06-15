@@ -149,7 +149,3 @@ $(document).ready(function () {
     /* URL bar resize fix for mobile */
     var screenHeight = $(window).height();
     $('.single').css('height', screenHeight + 'px');
-
-
-
-});
