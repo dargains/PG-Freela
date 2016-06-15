@@ -1,10 +1,11 @@
 $red: #F37272;
 $brown: #584E4A;
 $whitey: #f0f0f0;
-$speed: .8s;
+$speed: .5s;
 $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
+/* Bugs: when scrolling to a section it flashes the hero and then go to the specific section */
 
 .content {
 //  transform-origin: top left;
@@ -158,6 +159,8 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
   }
 }
 
-.single.shazam {
-    overflow: hidden;
+//.shazam opens and closes the menu button
+.single.shazam{
+    
 }
+

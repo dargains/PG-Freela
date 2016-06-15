@@ -69,64 +69,46 @@ $(document).ready(function () {
 
     /* ~~~~~~~~~~~ HEADER ~~~~~~~~~~~~ */
 
-    function scrollViewTo(target, callback) {
-        var duration, pos;
-        pos = $body.scrollTop();
-        duration = ((Math.abs(pos - target) / 1000) * 1000);
-
-        $("html:not(:animated),body:not(:animated)").animate({
-            scrollTop: target + 'px'
-        }, duration, callback);
-    }
-
-    // elements
+    // variables
     var $page = $('.single');
     var lastPos = undefined;
     var menuOpen = false;
 
     $('.menu_toggle').on('click', function () {
         $page.toggleClass('shazam');
-        var t = $(window).scrollTop();
-        menuOpen = !menuOpen;
-        lastPos = $(window).scrollTop();
-
-        console.log("Last pos is: " + menuOpen);
-
-        //When animation is over
-        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
-            , function () {
-
-            });
     });
 
     $('.content').on('click', function () {
         $page.removeClass('shazam');
     });
 
-    //    /* scroll to About */
-    $('#menu-about').on('click', function () {
-
-        $page.removeClass('shazam');
 
 
-        $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
 
-            $('html, body').stop();
-        });
+    var goTo = function (clicked, dest) {
+        $(clicked).on('click', function () {
 
-        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
-            , function () {
-
-                $('html, body').stop(true, false).animate({
-                    scrollTop: $("#hero-end").offset().top
-                }, 1500, function () {
-                    $('html, body').off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-                    $('html, body').stop();
-                });
+            $page.removeClass('shazam');
 
 
+            $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+
+                $('html, body').stop();
             });
-    });
+
+            $('html, body').stop(true, false).animate({
+                scrollTop: $(dest).offset().top
+            }, 1500, function () {
+                $('html, body').off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+                $('html, body').stop();
+            });
+
+        });
+    }
+
+    goTo("#menu-about", "#about-start");
+    goTo("#menu-portfolio", "#portfolio-start");
+    goTo("#menu-contact", "#contact-start");
     //
     //    /* scroll to Portfolio */
     //    $('#menu-portfolio').on('click', function () {
