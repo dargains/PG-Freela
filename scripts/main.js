@@ -1,28 +1,30 @@
 $(document).ready(function () {
-
-
     $(".popupPortfolio").hide();
 
-    $("article").click(function () {
-        var html = $('html');
+    $(".itemPortfolio").click(function () {
+        var index = $(".itemPortfolio").index(this) + 1,
+            itemPop = $(".popupPortfolio" + index);
         $(".popupPortfolio").show();
+        itemPop.show();
         $(".popupPortfolio").css("top", Math.max(0, (($(window).height() - $($(".popupPortfolio")).outerHeight()) / 2) +
-            $(window).scrollTop()) + "px");
+        $(window).scrollTop()) + "px");
         $(".popupPortfolio").css("left", Math.max(0, (($(window).width() - $($(".popupPortfolio")).outerWidth()) / 2) +
-            $(window).scrollLeft()) + "px");
+        $(window).scrollLeft()) + "px");
         disableScroll();
     });
 
     $(".closePortfolio").click(function () {
+        $(this).parent().parent().hide();
         $(".popupPortfolio").hide();
         enableScroll();
     });
 
-    $(".hero-down").click(function () {
+    $(".hero-down").click(function(){
         $('html,body').animate({
-            scrollTop: $('#hero-end').offset().top
-        }, 'slow');
+        scrollTop: $('#hero-end').offset().top}, 'slow');
     });
+
+});
 
 
     // left: 37, up: 38, right: 39, down: 40,

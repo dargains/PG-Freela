@@ -28,9 +28,13 @@
             @include font("OpenSans-Bold", 65px, $black-1, normal);
             background-color: $cor-primaria;
             display: inline-block;
-            line-height: 30px;
+            line-height: 60px;
             margin: 20px 0;
             padding: 20px;
+
+            @include tablet {
+
+            }
         }
         h2 {
             @include font("OpenSans-Light", 25px, $black-1, normal);
