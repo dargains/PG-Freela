@@ -2,14 +2,14 @@ $(document).ready(function () {
     $(".popupPortfolio").hide();
 
     $(".itemPortfolio").click(function () {
-        var index = $(".itemPortfolio").index(this) + 1,
-            itemPop = $(".popupPortfolio" + index);
+        var index = $(".itemPortfolio").index(this) + 1
+            , itemPop = $(".popupPortfolio" + index);
         $(".popupPortfolio").show();
         itemPop.show();
         $(".popupPortfolio").css("top", Math.max(0, (($(window).height() - $($(".popupPortfolio")).outerHeight()) / 2) +
-        $(window).scrollTop()) + "px");
+            $(window).scrollTop()) + "px");
         $(".popupPortfolio").css("left", Math.max(0, (($(window).width() - $($(".popupPortfolio")).outerWidth()) / 2) +
-        $(window).scrollLeft()) + "px");
+            $(window).scrollLeft()) + "px");
         disableScroll();
     });
 
@@ -19,12 +19,13 @@ $(document).ready(function () {
         enableScroll();
     });
 
-    $(".hero-down").click(function(){
+    $(".hero-down").click(function () {
         $('html,body').animate({
-        scrollTop: $('#hero-end').offset().top}, 'slow');
+            scrollTop: $('#hero-end').offset().top
+        }, 'slow');
     });
 
-});
+
 
 
     // left: 37, up: 38, right: 39, down: 40,
@@ -143,9 +144,29 @@ $(document).ready(function () {
     //    })
 
 
+    /* ----------- FOOTER -------------- */
+    $('.click-heart').on('click', function () {
+        $(this).addClass("animated-heart").delay(300).queue(function (next) {
+            $(this).removeClass("animated-heart");
+            next();
+        });
+
+        $('.footer p:first-child').addClass("wobble").delay(1000).queue(function (next) {
+            $(this).removeClass("wobble");
+            next();
+        });
+
+        $('.footer p:last-child').addClass("shake").delay(1000).queue(function (next) {
+            $(this).removeClass("shake");
+            next();
+        });
+    });
 
     /* ----------- MISC -------------- */
 
     /* URL bar resize fix for mobile */
     var screenHeight = $(window).height();
     $('.single').css('height', screenHeight + 'px');
+
+
+});
