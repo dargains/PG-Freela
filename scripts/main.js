@@ -96,10 +96,15 @@ $(document).ready(function () {
 
 
     var goTo = function (clicked, dest) {
-        $(clicked).on('click', function () {
+        $(clicked).on('click', function (e) {
             var stopScrollOn = "scroll wheel DOMMouseScroll mousewheel touchmove";
+            
             $page.removeClass('shazam');
+            
+            
             enableScroll();
+            //prevent the default action, which is to visit the href attribute and go to the top
+            e.preventDefault(); 
 
             $('html, body').on(stopScrollOn, function () {
 
@@ -119,6 +124,7 @@ $(document).ready(function () {
     goTo("#menu-about", "#about-start");
     goTo("#menu-portfolio", "#portfolio-start");
     goTo("#menu-contact", "#contact-start");
+    goTo("#menu-expertise", "#expertise-start");
     //
     //    /* scroll to Portfolio */
     //    $('#menu-portfolio').on('click', function () {

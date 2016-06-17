@@ -25,8 +25,6 @@
                     padding: 20px 0;
                     padding-top: 40px;
                 }
-
-
             }
         }
         .right-block {
@@ -39,16 +37,12 @@
                 @include breakpoint(sm) {
                     padding-top: 40px;
                 }
-                @include breakpoint(xs) {
+                @include breakpoint(xs-all){
                     padding: 20px 0;
+                    padding-bottom: 40px;
                     text-align: center;
-                }
-                @include breakpoint(xxs-all) {
                     margin: 0;
-                    padding: 20px 0;
-                    text-align: center;
                 }
-
             }
         }
     }

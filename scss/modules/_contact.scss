@@ -24,7 +24,7 @@
                 }
             }
             h2,
-            address {
+            h2 {
                 @include font("OpenSans-Regular", 13px, $black-3, normal);
                 margin: 10px 0;
                 line-height: 160%;
@@ -32,7 +32,7 @@
             article.reach-us {
                 margin-bottom: 60px;
             }
-            address {
+            h2 {
                 margin-bottom: 60px;
             }
             ul {
