@@ -7,7 +7,7 @@
             padding: 20px 0;
             p {
                 margin: -2px auto;
-                @include font("Oswald-Regular", 22px, $black-1, normal);
+                @include font("Oswald-Light", 22px, $black-1, normal);
                 text-transform: none;
                 text-align: center;
             }
