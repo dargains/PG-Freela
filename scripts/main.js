@@ -70,7 +70,7 @@ $(document).ready(function () {
     }
 
 
-    /* ~~~~~~~~~~~ HEADER ~~~~~~~~~~~~ */
+    /* ~~~~~~~~~~~ MENU ~~~~~~~~~~~~ */
 
     // variables
     var $page = $('.single');
@@ -79,13 +79,13 @@ $(document).ready(function () {
 
     $('.menu_toggle').on('click', function () {
         $page.toggleClass('shazam');
-        
-            if ($($page).hasClass('shazam')){
-        disableScroll();
-    } else if (!$($page).hasClass('shazam')){
-        enableScroll();
-    }
-        
+
+        if ($($page).hasClass('shazam')) {
+            disableScroll();
+        } else if (!$($page).hasClass('shazam')) {
+            enableScroll();
+        }
+
     });
 
     $('.content').on('click', function () {
@@ -97,11 +97,11 @@ $(document).ready(function () {
 
     var goTo = function (clicked, dest) {
         $(clicked).on('click', function () {
-
+            var stopScrollOn = "scroll wheel DOMMouseScroll mousewheel touchmove";
             $page.removeClass('shazam');
-                enableScroll();
+            enableScroll();
 
-            $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+            $('html, body').on(stopScrollOn, function () {
 
                 $('html, body').stop();
             });
@@ -109,7 +109,7 @@ $(document).ready(function () {
             $('html, body').stop(true, false).animate({
                 scrollTop: $(dest).offset().top
             }, 1500, function () {
-                $('html, body').off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+                $('html, body').off(stopScrollOn);
                 $('html, body').stop();
             });
 

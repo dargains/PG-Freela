@@ -1,0 +1,38 @@
+.expertise {
+    width: 100%;
+    background: $bg;
+    .container {
+        article {
+            div {
+                padding: 0;
+                margin: 0 10px;
+                margin-top: 60px;
+                margin-bottom: 80px;
+                text-align: center;
+                @include breakpoint(xs-all) {
+                    margin-bottom: 20px;
+                }
+                i {
+                    position: relative;
+                    left: 0;
+                    padding-bottom: 30px;
+                }
+                h1 {
+                    span {
+                        @include font("Oswald-Regular", 20px, $black-1, normal);
+                    }
+                    @include font("Oswald-Light", 20px, $black-1, normal);
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    padding-bottom: 15px;
+                }
+                p {
+                    text-align: justify;
+                    line-height: 160%;
+                    @include font("OpenSans-Regular", 14px, $black-3, normal);
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
