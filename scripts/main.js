@@ -79,6 +79,13 @@ $(document).ready(function () {
 
     $('.menu_toggle').on('click', function () {
         $page.toggleClass('shazam');
+        
+            if ($($page).hasClass('shazam')){
+        disableScroll();
+    } else if (!$($page).hasClass('shazam')){
+        enableScroll();
+    }
+        
     });
 
     $('.content').on('click', function () {
@@ -92,7 +99,7 @@ $(document).ready(function () {
         $(clicked).on('click', function () {
 
             $page.removeClass('shazam');
-
+                enableScroll();
 
             $('html, body').on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
 
