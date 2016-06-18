@@ -23,6 +23,8 @@
             overflow: hidden;
             float: left;
             cursor: pointer;
+            -webkit-transform: transale3d(0, 0, 0);
+            -moz-transform: transale3d(0, 0, 0);
             transform: transale3d(0, 0, 0);
             &:before {
                 padding-top: 100%;
@@ -36,6 +38,8 @@
                 img {
                     top: -1000px;
                     -webkit-filter: brightness(50%);
+                    -moz-filter: brightness(50%);
+                    filter: brightness(50%);
                 }
             }
             figure {
@@ -116,16 +120,24 @@
         float: left;
         background-color: #fff;
         .wrapper-pop-text {
-            width: 80%;
+            width: 90%;
             margin: 0 auto;
             transform: translateY(-50%);
             top: 50%;
             * {
-                padding: 20px 0;
+                padding: 10px 0;
+                @include mobile {
+                    padding: 5px 0;
+                }
             }
             .popup-tags {
                 border-top: 1px solid #cecece;
                 border-bottom: 1px solid #cecece;
+            }
+            h1 {
+                @include mobile {
+                    margin: 5px 0;
+                }
             }
         }
         span {
