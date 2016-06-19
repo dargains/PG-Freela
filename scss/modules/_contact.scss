@@ -1,12 +1,12 @@
 .contact {
     background: $bg;
-    padding: 40px 0;
+    margin-top: 200px;
     overflow: hidden;
     .container {
+        margin-top: 60px;
         .contact-details {
             background: transparent;
             text-align: left;
-
             @include breakpoint(xs-all) {
                 padding: 20px 20px;
             }
@@ -78,6 +78,9 @@
             }
             textarea {
                 height: 165px;
+            }
+            input:first-child {
+                margin-top: 0 !important;
             }
             input:not([type="submit"]),
             textarea {
