@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+
+    /* ~~~~~~~~~~~ PORTFOLIO ~~~~~~~~~~~~ */
     $(".popupPortfolio").hide();
 
     $(".itemPortfolio").click(function () {
@@ -19,11 +22,7 @@ $(document).ready(function () {
         enableScroll();
     });
 
-    $(".hero-down").click(function () {
-        $('html,body').animate({
-            scrollTop: $('#hero-end').offset().top
-        }, 'slow');
-    });
+
 
 
 
@@ -98,13 +97,13 @@ $(document).ready(function () {
     var goTo = function (clicked, dest) {
         $(clicked).on('click', function (e) {
             var stopScrollOn = "scroll wheel DOMMouseScroll mousewheel touchmove";
-            
+
             $page.removeClass('shazam');
-            
-            
+
+
             enableScroll();
             //prevent the default action, which is to visit the href attribute and go to the top
-            e.preventDefault(); 
+            e.preventDefault();
 
             $('html, body').on(stopScrollOn, function () {
 
@@ -121,41 +120,15 @@ $(document).ready(function () {
         });
     }
 
+    /* ----------- NAVIGATION -------------- */
+
     goTo("#menu-about", "#about-start");
     goTo("#menu-portfolio", "#portfolio-start");
     goTo("#menu-contact", "#contact-start");
     goTo("#menu-expertise", "#expertise-start");
-    //
-    //    /* scroll to Portfolio */
-    //    $('#menu-portfolio').on('click', function () {
-    //
-    //        $page.removeClass('shazam');
-    //
-    //
-    //        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
-    //            , function () {
-    //                $('html, body').animate({
-    //                    scrollTop: $("#portfolio-start").offset().top
-    //                }, 1500);
-    //
-    //            });
-    //    })
-    //
-    //    /* scroll to Contact */
-    //    $('#menu-contact').on('click', function () {
-    //
-    //        $page.removeClass('shazam');
-    //
-    //
-    //        $(".content").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
-    //            , function () {
-    //                $('html, body').animate({
-    //                    scrollTop: $("#contact-start").offset().top
-    //                }, 1500);
-    //
-    //            });
-    //    })
-
+    goTo('.hero-down', "#about-start");
+    goTo('.drop-from-hero', "#about-start");
+    goTo(".drop-to-contact", "#contact-start");
 
     /* ----------- FOOTER -------------- */
     $('.click-heart').on('click', function () {
@@ -173,6 +146,25 @@ $(document).ready(function () {
             $(this).removeClass("shake");
             next();
         });
+    });
+
+    /* ----------- EXPERTISE LIST ~ SHOW AND HIDE CONTENT -------------- */
+    size_li = $("#expertise .row").size();
+    start = 1;
+    add = 1;
+    click = 1;
+    phrase = ['Calma, temos mais bons motivos!', 'Sim, ainda mais!', 'yay!', 'Ótimos motivos, uh?', 'é... chegamos ao fim'];
+
+
+    $('#expertise .row:lt(' + start + ')').show();
+    $('#loadMore').click(function (e) {
+        click++;
+        e.preventDefault();
+        start = (start + add <= size_li) ? start + add : size_li;
+        $('#expertise .row:lt(' + start + ')').slideDown(1500, function () {
+            $('#loadMore').text(phrase[click - 2]);
+        });
+
     });
 
     /* ----------- MISC -------------- */

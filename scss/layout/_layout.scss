@@ -10,8 +10,7 @@
     @font-face {
         font-family: $font-family;
         src: url('#{$file-path}.eot');
-        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
-        //url('#{$file-path}.woff') format('woff'),
+        src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), //url('#{$file-path}.woff') format('woff'),
         url('#{$file-path}.ttf') format('truetype'),
         url('#{$file-path}.svg##{$font-family}') format('svg');
         font-weight: $font-weight;
@@ -110,7 +109,6 @@ $desktop: 1280px;
 html,
 body {
     height: 100%;
-    
 }
 
 h1 {
@@ -129,15 +127,18 @@ h1 {
     padding: 0 20px;
     border: 1px solid #fff;
     color: #fff;
-    @include font("OpenSans-Bold", 16px, $gray-1, normal);
+    @include font("OpenSans-Bold",
+    16px,
+    $gray-1,
+    normal);
     text-transform: uppercase;
     text-decoration: none;
-    background-color: rgba(255,255,255,.2);
+    background-color: rgba(255, 255, 255, .2);
     transition: all .2s ease-in-out;
-    &:hover{
+    &:hover {
         text-decoration: none;
         color: #fff;
-        background-color: rgba(255,255,255,.4);
+        background-color: rgba(255, 255, 255, .4);
     }
 }
 
@@ -145,10 +146,10 @@ h1 {
     @extend .btn;
     border: 1px solid #fff;
     color: #fff;
-    &:hover{
+    &:hover {
         text-decoration: none;
         color: #fff;
-        background-color: rgba(255,255,255,.5);
+        background-color: rgba(255, 255, 255, .5);
     }
 }
 
@@ -156,12 +157,11 @@ h1 {
     @extend .btn;
     border: 1px solid #333;
     color: #666;
-    &:hover{
+    &:hover {
         text-decoration: none;
         color: #333;
-        background-color: rgba(255,255,255,.7);
+        background-color: rgba(255, 255, 255, .7);
     }
-
 }
 
 address {
@@ -169,13 +169,15 @@ address {
 }
 
 a {
-    text-decoration: none;
+    color: inherit !important;
+    text-decoration: none !important;
+
 }
 
-.content{
+.content {
     height: 100%;
 }
 
-.single{
+.single {
     overflow-x: hidden;
 }
