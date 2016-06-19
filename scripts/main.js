@@ -5,6 +5,7 @@ $(document).ready(function () {
     $(".popupPortfolio").hide();
 
     $(".itemPortfolio").click(function () {
+        $('.popupPortfolio').height($(window).height());
         var index = $(".itemPortfolio").index(this) + 1
             , itemPop = $(".popupPortfolio" + index);
         $(".popupPortfolio").show();
