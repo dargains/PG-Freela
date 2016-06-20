@@ -174,5 +174,39 @@ $(document).ready(function () {
     var screenHeight = $(window).height();
     $('.single').css('height', screenHeight + 'px');
 
+    /* ----------- TRANSLATIONS -------------- */
+
+    // preparing language file
+    var aLangKeys = new Array();
+
+    aLangKeys['en'] = new Array();
+    aLangKeys['pt'] = new Array();
+
+
+    aLangKeys['en']['menu-about'] = 'Home';
+    aLangKeys['en']['menu-portfolio'] = 'Peoples >>';
+    aLangKeys['en']['menu-pros'] = 'All list';
+    aLangKeys['en']['menu-contact'] = 'Online';
+    aLangKeys['en']['hero-subtitle'] = 'english-test';
+    aLangKeys['en']['hero-btn'] = 'en :)';
+
+    aLangKeys['pt']['menu-about'] = 'Home';
+    aLangKeys['pt']['menu-portfolio'] = 'Portfólio';
+    aLangKeys['pt']['menu-pros'] = 'Todas listas';
+    aLangKeys['pt']['menu-contact'] = 'В сети';
+    aLangKeys['pt']['hero-subtitle'] = 'pt test';
+    aLangKeys['en']['hero-btn'] = 'ptptp';
+
+    // onclick behavior
+    $('.lang').click(function () {
+
+        var lang = $(this).attr('id'); // obtain language id
+
+        // translate all elements that has a key
+        $('*[key]').each(function (i) {
+            $(this).text(aLangKeys[lang][$(this).attr('key')]);
+        });
+
+    });
 
 });
