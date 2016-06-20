@@ -1,6 +1,6 @@
 .expertise {
     width: 100%;
-    background: $bg;
+    background: $background-color-light;
     .container {
         article {
             div {
@@ -21,9 +21,9 @@
                 h1 {
                     text-align: left;
                     span {
-                        @include font("Oswald-Regular", 20px, $black-1, normal);
+                        @include font("Oswald-Regular", 20px, $primary-text-color, normal);
                     }
-                    @include font("Oswald-Light", 20px, $black-1, normal);
+                    @include font("Oswald-Light", 20px, $primary-text-color, normal);
                     letter-spacing: 3px;
                     text-transform: uppercase;
                     padding-bottom: 15px;
@@ -35,7 +35,7 @@
                     text-align: left;
                     line-height: 160%;
                     width: 90%;
-                    @include font("OpenSans-Regular", 14px, $black-3, normal);
+                    @include font("OpenSans-Regular", 14px, $secondary-text-color, normal);
                     letter-spacing: 1px;
                     @include breakpoint(xs-all) {
                         width: 100%;

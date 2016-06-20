@@ -1,7 +1,7 @@
 .contact {
-    background: $bg;
-
+    background: $background-color-light;
     overflow: hidden;
+    padding-bottom: 50px;
     .container {
         margin-top: 60px;
         .contact-details {
@@ -15,7 +15,7 @@
                 text-align: center;
             }
             h1 {
-                @include font("OpenSans-Bold", 15px, $black-1, normal);
+                @include font("OpenSans-Bold", 15px, $primary-text-color, normal);
                 margin-top: 0;
             }
             h2 {
@@ -25,7 +25,7 @@
             }
             h2,
             h2 {
-                @include font("OpenSans-Regular", 13px, $black-3, normal);
+                @include font("OpenSans-Regular", 13px, $secondary-text-color, normal);
                 margin: 10px 0;
                 line-height: 160%;
             }
@@ -41,7 +41,7 @@
                     &::after {
                         content: '';
                         display: block;
-                        background: $gray-1;
+                        background: $divider-color;
                         margin: 15px 0;
                         text-align: center;
                         width: 90%;
@@ -63,7 +63,7 @@
                     span {
                         &,
                         * {
-                            @include font("OpenSans-Regular", 15px, $black-2, normal);
+                            @include font("OpenSans-Regular", 15px, $primary-text-color, normal);
                         }
                     }
                 }
@@ -84,18 +84,18 @@
             }
             input:not([type="submit"]),
             textarea {
-                @include font("OpenSans-Regular", 13px, $black-2, normal);
+                @include font("OpenSans-Regular", 13px, $primary-text-color, normal);
                 line-height: 40px;
                 padding-left: 20px;
                 width: 100%;
                 margin: 20px 0;
                 outline: 0;
                 border: none;
-                border-bottom: 1px solid $gray-1;
+                border-bottom: 1px solid $background-color-dark;
             }
             input:focus,
             textarea:focus {
-                @include font("OpenSans-Regular", 13px, $black-2, normal);
+                @include font("OpenSans-Regular", 13px, $primary-text-color, normal);
             }
             /* Todos inputs menos o botão submit */
             input:not([type="submit"]) {

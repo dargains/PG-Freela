@@ -1,13 +1,13 @@
 .footer {
     width: 100%;
-    background: $bg;
+    background: $primary-text-color;
     .container {
         div {
             margin: 0 auto;
             padding: 20px 0;
             p {
                 margin: -2px auto;
-                @include font("Oswald-Light", 22px, $black-1, normal);
+                @include font("Oswald-Light", 22px, $background-color-light, normal);
                 text-transform: none;
                 text-align: center;
             }

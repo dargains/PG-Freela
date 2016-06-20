@@ -1,13 +1,14 @@
 .quote {
     width: 100%;
-    background: #f6f6f6;
+    background: $primary-color;
     .container {
         div {
             text-align: center;
             margin: 0 auto;
             padding: 50px 0;
             h1 {
-                @include font("Oswald-Regular", 28px, $black-1, normal);
+                @include font("Oswald-Light", 30px, $primary-color-text, normal);
+                letter-spacing: 2px;
                 text-transform: none;
                 text-align: center;
                 padding-bottom: 40px;
@@ -23,6 +24,7 @@
 }
 
 .btn-only{
+    background-color: $background-color-light;
     h1{
         display: none;
     }

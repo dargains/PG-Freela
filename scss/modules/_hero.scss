@@ -26,8 +26,8 @@
         text-align: center;
         h1 {
             display: inline-block;
-            @include font("OpenSans-Bold", 65px, $black-1, normal);
-            background-color: $cor-primaria;
+            @include font("OpenSans-Bold", 65px, $primary-text-color, normal);
+            background-color: $accent-color;
             display: inline-block;
             line-height: 60px;
             margin: 20px 0;
@@ -44,8 +44,7 @@
             }
         }
         h2 {
-            @include font("OpenSans-Light", 25px, $black-1, normal);
-            color: #fff;
+            @include font("OpenSans-Light", 30px, $primary-color-text, normal);
             margin: 10px 0;
             @include tablet {
                 font-size: 20px;
@@ -56,27 +55,21 @@
                 margin: 5px 0;
             }
         }
-        .btn {
-            margin: 40px 0;
-            @include tablet {
-                margin: 10px 0;
-            }
-            @include mobile {
-                margin: 10px 0;
-            }
-        }
     }
     .hero-down {
         bottom: 30px;
         left: 50%;
+        font-size: 20px;
         transform: translateX(-50%);
         display: inline-block;
         z-index: 4;
         position: absolute;
-        color: #cecece;
         animation: hero-down 2s infinite;
         cursor: pointer;
         padding: 20px;
+        i {
+            color: $primary-color-text !important;
+        }
             @include tablet {
                 bottom: 10px;
         animation: hero-down-mob 2s infinite;

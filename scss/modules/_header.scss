@@ -1,6 +1,3 @@
-$red: #F37272;
-$brown: #584E4A;
-$whitey: #f0f0f0;
 $speed: .5s;
 $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
@@ -21,7 +18,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     cursor: pointer;
     width: 100px;
     height: 80px;
-    background-color: $red;
+    background-color: $accent-color;
     border-bottom-right-radius: 100%;
     &:active {
         i {
@@ -29,7 +26,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         }
     }
     i {
-        color: $whitey;
+        color: $primary-color-text;
     }
     .menu_open,
     .menu_close {
@@ -76,13 +73,13 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: darken($whitey, 30%);
+        color: darken($primary-color-dark, 30%);
         transition: color .2s;
         .icon {
             position: relative;
             display: inline-block;
             margin-right: 25px;
-            color: $whitey;
+            color: $primary-color-dark;
             &:after {
                 position: absolute;
                 top: 50%;
@@ -94,21 +91,21 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
                 margin-left: -33px;
                 margin-top: -32px;
                 border-radius: 100%;
-                border: 2px solid $whitey;
+                border: 2px solid $background-color-dark;
                 transition: border-color .2s;
             }
         }
         &:hover {
-            color: $whitey;
+            color: $accent-color !important;
             .icon {
                 &:after {
-                    border-color: $red;
+                    border-color: $accent-color;
                 }
             }
         }
         &:active {
             .icon {
-                color: $red;
+                color: $accent-color;
             }
         }
     }
