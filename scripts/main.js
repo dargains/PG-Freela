@@ -167,7 +167,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('#loadMore').text(phrase[click - 2]);
             }, 1500);
-            
+
         });
 
     });
@@ -301,5 +301,19 @@ $(document).ready(function () {
         });
 
     });
+
+});
+
+/* PRE-LOADER */
+
+$(window).load(function () {
+    $('.single').addClass('loaded');
+
+    $(".single").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
+        , function () {
+            //doSomething
+            $('#loader-wrapper').remove();
+        });
+
 
 });
