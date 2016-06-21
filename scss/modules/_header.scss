@@ -82,8 +82,8 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
             color: $primary-color-dark;
             &:after {
                 position: absolute;
-                top: 50%;
-                left: 50%;
+                top: 53%;
+                left: 54%;
                 content: '';
                 display: block;
                 width: 60px;
@@ -93,7 +93,10 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
                 border-radius: 100%;
                 border: 2px solid $background-color-dark;
                 transition: border-color .2s;
+                
             }
+            
+            
         }
         &:hover {
             color: $accent-color !important;
