@@ -20,31 +20,41 @@
     .wrapper-hero {
         z-index: 5;
         width: 70%;
-        top: 50%;
-        transform: translateY(-50%);
-        margin: 0 auto;
-        text-align: center;
+        position: absolute;
+        text-align: left;
+        bottom: 150px;
+        left: 100px;
         h1 {
             display: inline-block;
-            @include font("OpenSans-Bold", 65px, $primary-text-color, normal);
+            @include font("OpenSans-Bold", 120px, $primary-text-color, normal);
             background-color: $accent-color;
             display: inline-block;
-            line-height: 60px;
+            line-height: 100px;
             margin: 20px 0;
             padding: 20px;
 
             @include tablet {
                 font-size: 40px;
                 margin: 10px 0;
+                width: 70%;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0 auto;
+                text-align: center;
             }
             @include mobile {
                 font-size: 40px;
                 margin: 10px 0;
             line-height: 40px;
+                width: 70%;
+                top: 50%;
+                transform: translateY(-50%);
+                margin: 0 auto;
+                text-align: center;
             }
         }
         h2 {
-            @include font("OpenSans-Light", 30px, $primary-color-text, normal);
+            @include font("OpenSans-Light", 40px, $primary-color-text, normal);
             margin: 10px 0;
             @include tablet {
                 font-size: 20px;
