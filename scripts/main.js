@@ -301,7 +301,13 @@ $(document).ready(function () {
         });
 
     });
-
+//popup device screen fix
+var phone = $(".phone"),
+    pcontent = $(".content-phone"),
+    dcontent = $(".content-desktop"),
+    slider = phone.innerWidth() - pcontent.innerWidth();
+dcontent.css("padding-right", slider + "px");
+pcontent.css("padding-right", slider + "px");
 });
 
 /* PRE-LOADER */
@@ -314,6 +320,4 @@ $(window).load(function () {
             //doSomething
             $('#loader-wrapper').remove();
         });
-
-
 });
