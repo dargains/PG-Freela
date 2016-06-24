@@ -8,3 +8,7 @@
 @include font-face(OpenSans-Light, '../fonts/OpenSans/OpenSans-Light', normal, normal);
 @include font-face(OpenSans-Regular, '../fonts/OpenSans/OpenSans-Regular', normal, normal);
 @include font-face(OpenSans-Bold, '../fonts/OpenSans/OpenSans-Bold', normal, normal);
+
+@include font-face(OpenSans-Condensed-Bold, '../fonts/OpenSansCondensed/OpenSans-CondBold', normal, normal);
+@include font-face(OpenSans-Condensed-Light, '../fonts/OpenSansCondensed/OpenSans-CondLight', normal, normal);
+@include font-face(OpenSans-Condensed-LightItalic, '../fonts/OpenSansCondensed/OpenSans-CondLightItalic', normal, normal);

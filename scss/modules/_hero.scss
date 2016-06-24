@@ -16,42 +16,50 @@
         z-index: 1;
         top: 0;
         left: 0;
-
     }
     .wrapper-hero {
         z-index: 5;
         width: 70%;
-        position: absolute;
-        text-align: left;
-        bottom: 150px;
-        left: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0 auto;
+        text-align: center;
         h1 {
             display: inline-block;
-            @include font("OpenSans-Bold", 120px, $primary-text-color, normal);
-            background-color: $accent-color;
+            @include font("OpenSans-Bold", 120px, $primary-color-text, normal);
+            background-color: $primary-color;
             display: inline-block;
             line-height: 100px;
             margin: 20px 0;
             padding: 20px;
-
+            span {
+                @include font("OpenSans-Condensed-Light", 165px, $primary-color-text, normal);
+            }
             @include tablet {
-                font-size: 40px;
+                font-size: 80px;
                 margin: 10px 0;
-                width: 70%;
+                width: 300px;
                 top: 50%;
                 transform: translateY(-50%);
                 margin: 0 auto;
                 text-align: center;
+                line-height: 70px;
+                span {
+                    font-size: 110px;
+                }
             }
             @include mobile {
                 font-size: 40px;
                 margin: 10px 0;
             line-height: 40px;
-                width: 70%;
+                width: 200px;
                 top: 50%;
                 transform: translateY(-50%);
                 margin: 0 auto;
                 text-align: center;
+                span {
+                    font-size: 55px;
+                }
             }
         }
         h2 {
