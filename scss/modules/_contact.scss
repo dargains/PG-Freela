@@ -91,7 +91,8 @@
                 margin: 20px 0;
                 outline: 0;
                 border: none;
-                border-bottom: 1px solid $background-color-dark;
+                background-color: transparent;
+                border: 2px solid $primary-text-color;
             }
             input:focus,
             textarea:focus {
@@ -101,6 +102,10 @@
             input:not([type="submit"]) {
                 line-height: 40px;
                 padding-left: 20px;
+            }
+            input[type="submit"] {
+                float: right;
+
             }
         }
     }

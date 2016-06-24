@@ -134,7 +134,7 @@ h1 {
     normal);
     text-transform: uppercase;
     text-decoration: none;
-
+    box-shadow: 2px 2px 10px rgba(0,0,0,.3);
     transition: all .2s ease-in-out;
     &:hover {
         text-decoration: none;
