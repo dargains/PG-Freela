@@ -30,19 +30,19 @@ $laptop: 1400px;
 }
 
 @mixin tablet {
-    @media (min-width: #{$mobile}) and (max-width: #{$tablet+1px}) {
+    @media (min-width: #{$mobile + 1px}) and (max-width: #{$tablet}) {
         @content;
     }
 }
 
 @mixin laptop {
-    @media (min-width: #{$tablet}) and (max-width: #{$laptop+1px}) {
+    @media (min-width: #{$tablet + 1px}) and (max-width: #{$laptop}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: #{$laptop}) {
+    @media (min-width: #{$laptop + 1px}) {
         @content;
     }
 }
@@ -101,7 +101,7 @@ $laptop: 1400px;
 * {
     padding: 0;
     margin: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     position: relative;
     list-style: none;
 }

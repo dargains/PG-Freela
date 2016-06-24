@@ -91,69 +91,69 @@
     }
 }
 
-//.popupPortfolio {
-//    position: absolute;
-//    width: 100%;
-//    height: 100%;
-//    top: 0;
-//    left: 0;
-//    overflow: hidden;
-//    z-index: 850;
-//    >* {
-//        display: none;
-//        height: 100%;
-//    }
-//    .popup-esq {
-//        width: 50%;
-//        float: left;
-//        img {
-//            width: 100%;
-//        }
-//        @include mobile {
-//            width: 100%;
-//            height: 50%;
-//        }
-//    }
-//    .popup-dir {
-//        width: 50%;
-//        height: 100%;
-//        float: left;
-//        background-color: #fff;
-//        .wrapper-pop-text {
-//            width: 90%;
-//            margin: 0 auto;
-//            transform: translateY(-50%);
-//            top: 50%;
-//            * {
-//                padding: 10px 0;
-//                @include mobile {
-//                    padding: 5px 0;
-//                }
-//            }
-//            .popup-tags {
-//                border-top: 1px solid #cecece;
-//                border-bottom: 1px solid #cecece;
-//            }
-//            h1 {
-//                @include mobile {
-//                    margin: 5px 0;
-//                }
-//            }
-//        }
-//        .closePortfolio {
-//            cursor: pointer;
-//            position: absolute;
-//            top: 40px;
-//            right: 50px;
-//            font-size: 20px;
-//        }
-//        @include mobile {
-//            width: 100%;
-//            height: 50%;
-//            font-size: 12px;
-//        }
-//    }
-//}
+.popupPortfolio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 850;
+    >* {
+        display: none;
+        height: 100%;
+    }
+    .popup-esq {
+        width: 50%;
+        float: left;
+        img {
+            width: 100%;
+        }
+        @include mobile {
+            width: 100%;
+            height: 50%;
+        }
+    }
+    .popup-dir {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: #fff;
+        .wrapper-pop-text {
+            width: 90%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            top: 50%;
+            * {
+                padding: 10px 0;
+                @include mobile {
+                    padding: 5px 0;
+                }
+            }
+            .popup-tags {
+                border-top: 1px solid #cecece;
+                border-bottom: 1px solid #cecece;
+            }
+            h1 {
+                @include mobile {
+                    margin: 5px 0;
+                }
+            }
+        }
+        .closePortfolio {
+            cursor: pointer;
+            position: absolute;
+            top: 40px;
+            right: 50px;
+            font-size: 20px;
+        }
+        @include mobile {
+            width: 100%;
+            height: 50%;
+            font-size: 12px;
+        }
+    }
+}
 .popup {
     position: relative;
     width: 100%;
