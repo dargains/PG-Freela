@@ -33,10 +33,6 @@ h1 {
   text-decoration: none;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   transition: all .2s ease-in-out; }
-  .button:hover, .btn-light:hover, .btn-dark:hover {
-    text-decoration: none;
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.4); }
 
 .btn-light {
   border: 1px solid #fff;
@@ -53,9 +49,11 @@ h1 {
   background-color: #f85b3f; }
   .btn-dark:hover {
     text-decoration: none;
-    color: #f85b3f;
+    color: #FFFFFF;
     border: 1px solid #212121;
     background-color: #212121; }
+  .btn-dark:focus {
+    color: #FFFFFF; }
 
 address {
   font-style: normal; }
@@ -70,7 +68,8 @@ a {
   overflow-x: hidden; }
 
 i {
-  color: #212121; }
+  color: #212121;
+  color: #303F9F; }
 
 @font-face {
   font-family: Oswald-Light;
@@ -327,6 +326,8 @@ i {
           .contact .container .send-message input[type="submit"] {
             width: 100%;
             float: none; } }
+  .contact .title-subtitle .container {
+    margin-top: 0; }
 
 .align-fix {
   margin-left: 3px; }
@@ -935,7 +936,7 @@ i {
       .expertise .container article div h1 span {
         font-family: "Oswald-Regular";
         font-size: 20px;
-        color: #212121;
+        color: #303F9F;
         font-weight: normal; }
       @media (max-width: 767px) {
         .expertise .container article div h1 {

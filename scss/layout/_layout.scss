@@ -135,11 +135,6 @@ h1 {
     text-decoration: none;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
     transition: all .2s ease-in-out;
-    &:hover {
-        text-decoration: none;
-        color: #fff;
-        background-color: rgba(255, 255, 255, .4);
-    }
 }
 
 .btn-light {
@@ -161,9 +156,12 @@ h1 {
     background-color: rgb(248, 91, 63);
     &:hover {
         text-decoration: none;
-        color: $accent-color;
+        color: $primary-color-text;
         border: 1px solid $primary-text-color;
         background-color: $primary-text-color;
+    }
+    &:focus {
+        color: $primary-color-text;
     }
 }
 
@@ -186,4 +184,5 @@ a {
 
 i {
     color: $primary-text-color;
+    color: $primary-color-dark;
 }

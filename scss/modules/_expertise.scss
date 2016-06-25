@@ -21,7 +21,7 @@
                 h1 {
                     text-align: left;
                     span {
-                        @include font("Oswald-Regular", 20px, $primary-text-color, normal);
+                        @include font("Oswald-Regular", 20px, $primary-color-dark, normal);
                     }
                     @include font("Oswald-Light", 20px, $primary-text-color, normal);
                     letter-spacing: 3px;
