@@ -120,13 +120,12 @@ h1 {
     overflow: hidden;
 }
 
-.btn {
+.button {
     outline: 0 !important;
     cursor: pointer;
     display: inline-block;
     line-height: 50px;
     padding: 0 20px;
-    border: 1px solid #fff;
     color: #fff;
     @include font("OpenSans-Bold",
     16px,
@@ -144,7 +143,7 @@ h1 {
 }
 
 .btn-light {
-    @extend .btn;
+    @extend .button;
     border: 1px solid #fff;
     color: #fff;
     background-color: rgba(255, 255, 255, .2);
@@ -156,14 +155,15 @@ h1 {
 }
 
 .btn-dark {
-    @extend .btn;
+    @extend .button;
     border: 1px solid $accent-color;
-    color: $primary-color-text !important;
+    color: $primary-color-text;
     background-color: rgb(248, 91, 63);
     &:hover {
         text-decoration: none;
         color: $accent-color;
-        background-color: rgba(248, 91, 63, .8);
+        border: 1px solid $primary-text-color;
+        background-color: $primary-text-color;
     }
 }
 
@@ -172,7 +172,7 @@ address {
 }
 
 a {
-    color: inherit !important;
+    //color: inherit !important;
     text-decoration: none !important;
 }
 

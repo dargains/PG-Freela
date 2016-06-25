@@ -40,6 +40,9 @@
                     letter-spacing: 1px;
                 }
             }
+            &:hover {
+                background-color: $background-color-extra-light;
+            }
         }
     }
 }
