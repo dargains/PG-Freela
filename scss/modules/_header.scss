@@ -20,6 +20,10 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
     height: 80px;
     background-color: $accent-color;
     border-bottom-right-radius: 100%;
+    @include breakpoint(xs-all) {
+        width: 70px;
+        height: 60px;
+    }
     &:active {
         i {
             opacity: 0.8
@@ -36,6 +40,10 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         margin-top: -15px;
         margin-left: -12px;
         transition: transform $speed $snap;
+        @include breakpoint(xs-all) {
+            top: 54%;
+            left: 47%;
+        }
     }
     .menu_open {
         transform-origin: -100px -100px;
@@ -93,10 +101,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
                 border-radius: 100%;
                 border: 2px solid $background-color-dark;
                 transition: border-color .2s;
-                
             }
-            
-            
         }
         &:hover {
             color: $accent-color !important;
@@ -145,7 +150,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
             &:nth-child(3) {
                 transition-delay: .48s;
             }
-                        &:nth-child(4) {
+            &:nth-child(4) {
                 transition-delay: .50s;
             }
         }
