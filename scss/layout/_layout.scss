@@ -22,7 +22,6 @@
 $mobile: 600px;
 $tablet: 1000px;
 $laptop: 1400px;
-
 @mixin mobile {
     @media (min-width: 0px) and (max-width: #{$mobile}) {
         @content;
@@ -122,6 +121,7 @@ h1 {
 }
 
 .btn {
+    outline: 0 !important;
     cursor: pointer;
     display: inline-block;
     line-height: 50px;
@@ -134,7 +134,7 @@ h1 {
     normal);
     text-transform: uppercase;
     text-decoration: none;
-    box-shadow: 2px 2px 10px rgba(0,0,0,.3);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
     transition: all .2s ease-in-out;
     &:hover {
         text-decoration: none;
@@ -163,7 +163,7 @@ h1 {
     &:hover {
         text-decoration: none;
         color: $accent-color;
-        background-color: rgba(248, 91, 63,.8);
+        background-color: rgba(248, 91, 63, .8);
     }
 }
 
@@ -174,7 +174,6 @@ address {
 a {
     color: inherit !important;
     text-decoration: none !important;
-
 }
 
 .content {

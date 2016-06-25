@@ -2,7 +2,6 @@ $speed: .5s;
 $snap: cubic-bezier(1.000, 0.005, 0.240, 1.000);
 $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
-/* Bugs: when scrolling to a section it flashes the hero and then go to the specific section */
 
 .content {
     //  transform-origin: top left;
@@ -10,6 +9,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .menu_toggle {
+
     z-index: 900;
     position: fixed;
     top: 0;
@@ -77,6 +77,7 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
         }
     }
     a {
+        outline: 0 !important;
         display: block;
         text-decoration: none;
         text-transform: uppercase;
@@ -124,16 +125,10 @@ $bounce: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 
 .shazam {
     .content {
-        //transform: rotate(-20deg);
+
         transform: translateX(320px);
     }
-    // this will show hidden content overflow when rotated,
-    // but will result in a jump, if you've already scrolled down the content
-    // plus, you will lose your current reading position
-    // fixable with JS, not gonna bother
-    /*.content_inner {
-    height: 100%;
-  }*/
+
     .menu_open {
         transform: rotate(-20deg);
     }
