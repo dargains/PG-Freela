@@ -6,16 +6,17 @@
     background-position: center center;
     background-size: cover;
     .mask-hero {
-        background: -webkit-linear-gradient(bottom left, rgba(48,63,159,0.8) 0%, rgba(248,91,63,0.8) 100%);
-        background: -o-linear-gradient(bottom left, rgba(48,63,159,0.8) 0%, rgba(248,91,63,0.8) 100%);
-        background: linear-gradient(to top right, rgba(48,63,159,0.8) 0%, rgba(248,91,63,0.8) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf303f9f', endColorstr='#bff85b3f',GradientType=1 );
+        background: -webkit-linear-gradient(bottom left, rgba(48, 63, 159, 0.7) 0%, rgba(248, 91, 63, 0.7) 100%);
+        background: -o-linear-gradient(bottom left, rgba(48, 63, 159, 0.7) 0%, rgba(248, 91, 63, 0.7) 100%);
+        background: linear-gradient(to top right, rgba(48, 63, 159, 0.7) 0%, rgba(248, 91, 63, 0.7) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf303f9f', endColorstr='#bff85b3f', GradientType=1);
         width: 100%;
         height: 100%;
         position: absolute;
         z-index: 1;
         top: 0;
         left: 0;
+        -webkit-filter: brightness(150%);
     }
     .wrapper-hero {
         z-index: 5;
@@ -24,54 +25,45 @@
         transform: translateY(-50%);
         margin: 0 auto;
         text-align: center;
+        background-color: $background-color-dark;
         h1 {
             display: inline-block;
             @include font("OpenSans-Bold", 120px, $divider-color, normal);
-            background-color: $background-color-dark;
             display: inline-block;
             line-height: 100px;
-            margin: 20px 0;
-            padding: 20px;
+            margin: 40px 0;
             span {
                 @include font("OpenSans-Condensed-Light", 165px, $secondary-text-color, normal);
             }
-            @include tablet {
+        }
+        @include tablet {
+            width: 320px;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 auto;
+            text-align: center;
+            h1 {
                 font-size: 80px;
-                margin: 10px 0;
-                width: 300px;
-                top: 50%;
-                transform: translateY(-50%);
-                margin: 0 auto;
-                text-align: center;
                 line-height: 70px;
+                margin: 30px 0;
                 span {
                     font-size: 110px;
                 }
             }
-            @include mobile {
-                font-size: 40px;
-                margin: 10px 0;
-                line-height: 40px;
-                width: 200px;
-                top: 50%;
-                transform: translateY(-50%);
-                margin: 0 auto;
-                text-align: center;
-                span {
-                    font-size: 55px;
-                }
-            }
         }
-        h2 {
-            @include font("OpenSans-Light", 40px, $primary-color-text, normal);
-            margin: 10px 0;
-            @include tablet {
-                font-size: 20px;
-                margin: 5px 0;
-            }
-            @include mobile {
-                font-size: 20px;
-                margin: 5px 0;
+        @include mobile {
+            width: 220px;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 auto;
+            text-align: center;
+            h1 {
+                font-size: 58px;
+                line-height: 50px;
+                margin: 20px 0;
+                span {
+                    font-size: 80px;
+                }
             }
         }
     }
@@ -89,14 +81,14 @@
         i {
             color: $primary-color-text !important;
         }
-            @include tablet {
-                bottom: 10px;
-        animation: hero-down-mob 2s infinite;
-            }
-            @include mobile {
-                bottom: 5px;
-        animation: hero-down-mob 2s infinite;
-            }
+        @include tablet {
+            bottom: 10px;
+            animation: hero-down-mob 2s infinite;
+        }
+        @include mobile {
+            bottom: 5px;
+            animation: hero-down-mob 2s infinite;
+        }
     }
     #hero-end {
         position: absolute;
@@ -105,25 +97,49 @@
 }
 
 @-webkit-keyframes hero-down {
-    0% {bottom: 30px;}
-    50% {bottom: 50px;}
-    100% {bottom: 30px;}
+    0% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 30px;
+    }
 }
 
 @keyframes hero-down {
-    0% {bottom: 30px;}
-    50% {bottom: 50px;}
-    100% {bottom: 30px;}
+    0% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 30px;
+    }
 }
 
 @-webkit-keyframes hero-down-mob {
-    0% {bottom: 0px;}
-    50% {bottom: 20px;}
-    100% {bottom: 0px;}
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 0px;
+    }
 }
 
 @keyframes hero-down-mob {
-    0% {bottom: 0px;}
-    50% {bottom: 20px;}
-    100% {bottom: 0px;}
+    0% {
+        bottom: 0px;
+    }
+    50% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 0px;
+    }
 }
