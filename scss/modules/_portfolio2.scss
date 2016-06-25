@@ -1,37 +1,67 @@
 .portfolio2 {
     .wrapper {
-        width: 1300px;
+        width: 90%;
         margin: 0 auto;
         article {
             overflow: hidden;
-            font-size: 0;
             margin: 50px 0;
-            img {
-                width: 60%;
-                display: inline-block;
-                padding: 20px;
-            }
             aside {
-                width: 40%;
-                display: inline-block;
-                top: 20%;
-                position: absolute;
-                padding: 20px;
-                direction: ltr;
-                h1 {
-                    font-size: 36px;
+                background-image: url(../images/port1-desktop.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                width: 60%;
+                min-height: 400px;
+                float: right;
+                @include laptop {
+                    background-image: url(../images/port1-laptop.jpg);
                 }
-                h2 {
-                    font-size: 24px;
+                @include tablet {
+                    background-image: url(../images/port1-tablet.jpg);
                 }
-                p {
-                    font-size: 14px;
+                @include mobile {
+                    background-image: url(../images/port1-tablet.jpg);
+                    float: none;
+                    margin: 0 auto;
+                    width: 90%;
                 }
-
             }
-            &:nth-of-type(even) {
-                    direction: rtl;
-                }
+        }
+        @include desktop {
+            min-width: 1400px;
+            .d {
+                display: block;
+            }
+            .l, .t, .p{
+                display: none;
+            }
+        }
+        @include laptop {
+            min-width: 1000px;
+            .l {
+                display: block;
+            }
+            .d,.t,.p {
+                display: none;
+            }
+        }
+        @include tablet {
+            min-width: 500px;
+            .t {
+                display: block;
+            }
+            .d,.l,.p{
+                display: none;
+            }
+        }
+        @include mobile {
+            min-width: 300px;
+            .p {
+                display: block;
+            }
+            .d,.l,.t {
+                display: none;
+            }
         }
     }
 }

@@ -264,9 +264,9 @@ i {
         margin: 10px 0;
         line-height: 160%; }
       .contact .container .contact-details article.reach-us {
-        margin-bottom: 60px; }
+        margin-bottom: 30px; }
       .contact .container .contact-details h2 {
-        margin-bottom: 60px; }
+        margin-bottom: 40px; }
       .contact .container .contact-details ul li {
         margin: 10px 0; }
         .contact .container .contact-details ul li::after {
@@ -285,7 +285,8 @@ i {
           height: 0; }
         .contact .container .contact-details ul li i {
           font-size: 18px;
-          margin-right: 30px; }
+          margin-right: 30px;
+          top: 1px; }
         .contact .container .contact-details ul li span,
         .contact .container .contact-details ul li span * {
           font-family: "OpenSans-Regular";
@@ -300,7 +301,7 @@ i {
         .contact .container .send-message {
           width: 100%; } }
       .contact .container .send-message textarea {
-        height: 165px; }
+        height: 220px; }
       .contact .container .send-message input:first-child {
         margin-top: 0 !important; }
       .contact .container .send-message input:not([type="submit"]),
@@ -418,9 +419,6 @@ i {
       .hero .hero-down {
         bottom: 5px;
         animation: hero-down-mob 2s infinite; } }
-  .hero #hero-end {
-    position: absolute;
-    bottom: 0; }
 
 @-webkit-keyframes hero-down {
   0% {
@@ -719,31 +717,59 @@ i {
           top: 10%; } }
 
 .portfolio2 .wrapper {
-  width: 1300px;
+  width: 90%;
   margin: 0 auto; }
   .portfolio2 .wrapper article {
     overflow: hidden;
-    font-size: 0;
     margin: 50px 0; }
-    .portfolio2 .wrapper article img {
-      width: 60%;
-      display: inline-block;
-      padding: 20px; }
     .portfolio2 .wrapper article aside {
-      width: 40%;
-      display: inline-block;
-      top: 20%;
-      position: absolute;
-      padding: 20px;
-      direction: ltr; }
-      .portfolio2 .wrapper article aside h1 {
-        font-size: 36px; }
-      .portfolio2 .wrapper article aside h2 {
-        font-size: 24px; }
-      .portfolio2 .wrapper article aside p {
-        font-size: 14px; }
-    .portfolio2 .wrapper article:nth-of-type(even) {
-      direction: rtl; }
+      background-image: url(../images/port1-desktop.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 60%;
+      min-height: 400px;
+      float: right; }
+      @media (min-width: 1001px) and (max-width: 1400px) {
+        .portfolio2 .wrapper article aside {
+          background-image: url(../images/port1-laptop.jpg); } }
+      @media (min-width: 601px) and (max-width: 1000px) {
+        .portfolio2 .wrapper article aside {
+          background-image: url(../images/port1-tablet.jpg); } }
+      @media (min-width: 0px) and (max-width: 600px) {
+        .portfolio2 .wrapper article aside {
+          background-image: url(../images/port1-tablet.jpg);
+          float: none;
+          margin: 0 auto;
+          width: 90%; } }
+  @media (min-width: 1401px) {
+    .portfolio2 .wrapper {
+      min-width: 1400px; }
+      .portfolio2 .wrapper .d {
+        display: block; }
+      .portfolio2 .wrapper .l, .portfolio2 .wrapper .t, .portfolio2 .wrapper .p {
+        display: none; } }
+  @media (min-width: 1001px) and (max-width: 1400px) {
+    .portfolio2 .wrapper {
+      min-width: 1000px; }
+      .portfolio2 .wrapper .l {
+        display: block; }
+      .portfolio2 .wrapper .d, .portfolio2 .wrapper .t, .portfolio2 .wrapper .p {
+        display: none; } }
+  @media (min-width: 601px) and (max-width: 1000px) {
+    .portfolio2 .wrapper {
+      min-width: 500px; }
+      .portfolio2 .wrapper .t {
+        display: block; }
+      .portfolio2 .wrapper .d, .portfolio2 .wrapper .l, .portfolio2 .wrapper .p {
+        display: none; } }
+  @media (min-width: 0px) and (max-width: 600px) {
+    .portfolio2 .wrapper {
+      min-width: 300px; }
+      .portfolio2 .wrapper .p {
+        display: block; }
+      .portfolio2 .wrapper .d, .portfolio2 .wrapper .l, .portfolio2 .wrapper .t {
+        display: none; } }
 
 .pros {
   width: 100%;
