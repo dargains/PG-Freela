@@ -151,27 +151,7 @@ $(document).ready(function () {
         });
     });
 
-    /* ----------- EXPERTISE LIST ~ SHOW AND HIDE CONTENT -------------- */
-    size_li = $("#expertise .row").size();
-    start = 1;
-    add = 1;
-    click = 1;
-    phrase = ['Calma, temos mais bons motivos!', 'Sim, ainda mais!', 'yay!', 'Ótimos motivos, uh?', 'é... chegamos ao fim'];
 
-
-    $('#expertise .row:lt(' + start + ')').show();
-    $('#loadMore').click(function (e) {
-        click++;
-        e.preventDefault();
-        start = (start + add <= size_li) ? start + add : size_li;
-        $('#expertise .row:lt(' + start + ')').slideDown(1500, function () {
-            setTimeout(function () {
-                $('#loadMore').text(phrase[click - 2]);
-            }, 1500);
-
-        });
-
-    });
 
     /* ----------- MISC -------------- */
 
@@ -290,28 +270,55 @@ $(document).ready(function () {
     $('.lang').click(function () {
 
         var lang = $(this).attr('id'); // obtain language id
-
+        console.log ("lang, inside, is: " + lang)
         // translate all elements that has a key
         $('*[key]').each(function (i) {
             tagName = $(this).prop("tagName");
             text = $(this).text();
-                        console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
+            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
             console.log(text);
 
             $(this).text(aLangKeys[lang][$(this).attr('key')]);
         });
 
     });
-//popup device screen fix
-var phone = $(".phone"),
-    pcontent = $(".content-phone"),
-    dcontent = $(".content-desktop"),
-    slider = phone.innerWidth() - pcontent.innerWidth();
-dcontent.css("padding-right", slider + "px");
-pcontent.css("padding-right", slider + "px");
+
+    /* ----------- EXPERTISE LIST ~ SHOW AND HIDE CONTENT -------------- */
+
+    size_li = $("#expertise .row").size();
+    start = 1;
+    add = 1;
+    click = 1;
+    phrase = ['Calma, temos mais bons motivos!', 'Sim, ainda mais!', 'yay!', 'Ótimos motivos, uh?', 'é... chegamos ao fim'];
+
+
+    $('#expertise .row:lt(' + start + ')').show();
+    $('#loadMore').click(function (e) {
+
+        click++;
+        e.preventDefault();
+        start = (start + add <= size_li) ? start + add : size_li;
+        $('#expertise .row:lt(' + start + ')').slideDown(1500, function () {
+            setTimeout(function () {
+                console.log("lang is: " + lang)
+//                $("#loadMore").text(aLangKeys[lang]['footer-p-2']);
+//                $('#loadMore').text(aLangKeys['pt']['footer-p-2' + (click - 2)]);
+                $('#loadMore').text(phrase[click - 2]);
+            }, 1500);
+
+        });
+
+    });
+
+    /* ----- POPUP DEVICE SCREEN FIX ------------- */
+    var phone = $(".phone")
+        , pcontent = $(".content-phone")
+        , dcontent = $(".content-desktop")
+        , slider = phone.innerWidth() - pcontent.innerWidth();
+    dcontent.css("padding-right", slider + "px");
+    pcontent.css("padding-right", slider + "px");
 });
 
-/* PRE-LOADER */
 
 $(window).load(function () {
     $('.single').addClass('loaded');
@@ -322,3 +329,6 @@ $(window).load(function () {
             $('#loader-wrapper').remove();
         });
 });
+
+
+/* PRE-LOADER (must be outisde document.ready) */
