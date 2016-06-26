@@ -6,6 +6,9 @@
 .title-subtitle {
     background: $background-color-light;
     overflow: hidden;
+    &.title-subtitle-bg{
+        background: $background-color-extra-light;
+    }
     .container {
         border-bottom: 1px solid $background-color-dark;
         //
@@ -52,6 +55,7 @@
         }
     }
 }
+
 
 /* .contact {
     .title-subtitle {
