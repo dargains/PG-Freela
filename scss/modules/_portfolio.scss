@@ -7,7 +7,8 @@
             margin: 50px 0;
             overflow: hidden;
             h1,h2,p {
-                display: inline;
+                display: block;
+                width: 40%;
             }
             aside {
                 cursor: pointer;

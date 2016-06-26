@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     /* ~~~~~~~~~~~ PORTFOLIO ~~~~~~~~~~~~ */
-    $(".portfolio .wrapper article").on('click', function() {
+    $(".portfolio .wrapper article aside").on('click', function() {
         window.location.href = 'project1.html';
     });
 
