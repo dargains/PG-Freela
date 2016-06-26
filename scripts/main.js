@@ -90,6 +90,7 @@ $(document).ready(function () {
     });
 
     $('.content').on('click', function () {
+        enableScroll();
         $page.removeClass('shazam');
     });
 
