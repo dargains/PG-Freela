@@ -2,30 +2,9 @@ $(document).ready(function () {
 
 
     /* ~~~~~~~~~~~ PORTFOLIO ~~~~~~~~~~~~ */
-    $(".popupPortfolio").hide();
-
-    $(".itemPortfolio").click(function () {
-        $('.popupPortfolio').height($(window).height());
-        var index = $(".itemPortfolio").index(this) + 1
-            , itemPop = $(".popupPortfolio" + index);
-        $(".popupPortfolio").show();
-        itemPop.show();
-        $(".popupPortfolio").css("top", Math.max(0, (($(window).height() - $($(".popupPortfolio")).outerHeight()) / 2) +
-            $(window).scrollTop()) + "px");
-        $(".popupPortfolio").css("left", Math.max(0, (($(window).width() - $($(".popupPortfolio")).outerWidth()) / 2) +
-            $(window).scrollLeft()) + "px");
-        disableScroll();
+    $(".portfolio .wrapper article").on('click', function() {
+        window.location.href = 'project1.html';
     });
-
-    $(".closePortfolio").click(function () {
-        $(this).parent().parent().hide();
-        $(".popupPortfolio").hide();
-        enableScroll();
-    });
-
-
-
-
 
 
     // left: 37, up: 38, right: 39, down: 40,
