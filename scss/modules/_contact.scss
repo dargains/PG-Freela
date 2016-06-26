@@ -60,8 +60,15 @@
                         font-size: 18px;
                         margin-right: 30px;
                         top: 1px;
+                        &.fa-phone {
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
                     }
                     span {
+                        display: inline-block;
+                        width: 200px;
+                        text-align: left;
                         &,
                         * {
                             @include font("OpenSans-Regular", 15px, $primary-text-color, normal);
@@ -96,9 +103,7 @@
                 border: 2px solid $primary-text-color;
             }
             input:focus,
-            textarea:focus {
-                
-            }
+            textarea:focus {}
             /* Todos inputs menos o botão submit */
             input:not([type="submit"]) {
                 line-height: 40px;

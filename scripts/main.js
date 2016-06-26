@@ -294,7 +294,7 @@ $(document).ready(function () {
         $('*[key]').each(function (i) {
             tagName = $(this).prop("tagName");
             text = $(this).text();
-            //            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
+                        console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
             console.log(text);
 
             $(this).text(aLangKeys[lang][$(this).attr('key')]);
