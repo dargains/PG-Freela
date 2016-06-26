@@ -1146,7 +1146,8 @@ i {
     margin: 10px 0; }
   .project .container ul {
     margin: 0 10px;
-    padding: 0 10px; }
+    padding: 0 10px;
+    margin-left: 20px; }
     .project .container ul li {
       list-style: square; }
   .project .container img {
