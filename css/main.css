@@ -1081,4 +1081,70 @@ i {
   -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
+.project {
+  margin-bottom: 50px; }
+  .project .project-hero {
+    background-image: url("../images/projeto1/mockDrop_MacBook%20Pro (1).jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 600px;
+    width: 100%; }
+    .project .project-hero h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      font-family: "Oswald-Light";
+      font-size: 50px;
+      color: #FFFFFF;
+      font-weight: normal;
+      background-color: #f85b3f;
+      padding: 10px 20px; }
+  .project aside {
+    float: right;
+    margin-top: 50px; }
+    .project aside .row p {
+      font-family: "Opensans-bold";
+      font-size: 20px;
+      color: #212121;
+      font-weight: normal;
+      border-bottom: 2px solid #3F51B5;
+      display: inline; }
+    .project aside .row ul {
+      margin-bottom: 20px; }
+      .project aside .row ul li {
+        font-family: "Opensans-regular";
+        font-size: 12px;
+        color: #212121;
+        font-weight: normal;
+        margin-top: 5px; }
+        .project aside .row ul li a {
+          cursor: pointer !important;
+          color: #212121; }
+          .project aside .row ul li a:hover {
+            color: #3F51B5; }
+    @media (max-width: 767px) {
+      .project aside {
+        display: none; } }
+  .project .container h2 {
+    margin: 50px 0 30px 0;
+    font-family: "Oswald-Light";
+    font-size: 40px;
+    color: #212121;
+    font-weight: normal; }
+  .project .container h3 {
+    font-family: "Oswald-Light";
+    font-size: 30px;
+    color: #212121;
+    font-weight: normal;
+    margin: 30px 0 20px 0; }
+  .project .container p {
+    font-family: "Opensans-regular";
+    font-size: 12px;
+    color: #212121;
+    font-weight: normal;
+    margin: 10px 0; }
+  .project .container img {
+    width: 100%; }
+
 /*# sourceMappingURL=main.css.map */
