@@ -1,0 +1,353 @@
+.portfolio {
+    /* ul {
+        overflow: hidden;
+        text-align: center;
+        li {
+            line-height: 100px;
+            display: inline-block;
+            padding: 0 20px;
+            text-transform: uppercase;
+            color: $cor-primaria;
+            cursor: pointer;
+            &:hover {
+                color: $cor-secundaria;
+            }
+        }
+    } */
+    .article-wrapper {
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        article {
+            width: 25%;
+            overflow: hidden;
+            float: left;
+            cursor: pointer;
+            -webkit-transform: transale3d(0, 0, 0);
+            -moz-transform: transale3d(0, 0, 0);
+            transform: transale3d(0, 0, 0);
+            &:before {
+                padding-top: 100%;
+                display: block;
+                content: '';
+            }
+            &:hover {
+                .subtitle {
+                    max-height: 110px;
+                }
+                img {
+                    top: -1000px;
+                    -webkit-filter: brightness(50%);
+                    -moz-filter: brightness(50%);
+                    filter: brightness(50%);
+                }
+            }
+            figure {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                img {
+                    position: relative;
+                    width: 100%;
+                    top: 0;
+                    transform: transale3d(0, 0, 0);
+                    transition: top 5s ease-in-out, -webkit-filter .4s ease-in-out;
+                }
+                .subtitle {
+                    max-height: 0px;
+                    width: 100%;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: #fff;
+                    border-top: 5px solid rgba(0, 0, 0, .8);
+                    box-sizing: content-box;
+                    overflow: hidden;
+                    transition: all .4s ease-in-out;
+                    h3 {
+                        padding: 10px;
+                        margin: 0;
+                    }
+                    p {
+                        padding: 10px 10px;
+                        margin: 0;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            //article
+            @include laptop {
+                width: 50%;
+            }
+            @include tablet {
+                width: 50%;
+            }
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.popupPortfolio {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 850;
+    >* {
+        display: none;
+        height: 100%;
+    }
+    .popup-esq {
+        width: 50%;
+        float: left;
+        img {
+            width: 100%;
+        }
+        @include mobile {
+            width: 100%;
+            height: 50%;
+        }
+    }
+    .popup-dir {
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-color: #fff;
+        .wrapper-pop-text {
+            width: 90%;
+            margin: 0 auto;
+            transform: translateY(-50%);
+            top: 50%;
+            * {
+                padding: 10px 0;
+                @include mobile {
+                    padding: 5px 0;
+                }
+            }
+            .popup-tags {
+                border-top: 1px solid #cecece;
+                border-bottom: 1px solid #cecece;
+            }
+            h1 {
+                @include mobile {
+                    margin: 5px 0;
+                }
+            }
+        }
+        .closePortfolio {
+            cursor: pointer;
+            position: absolute;
+            top: 40px;
+            right: 50px;
+            font-size: 20px;
+        }
+        @include mobile {
+            width: 100%;
+            height: 50%;
+            font-size: 12px;
+        }
+    }
+}
+.popup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .popup-devices {
+        width: 60%;
+        height: 100%;
+        .desktop {
+            background-image: url(../images/desktop.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            .screen-desktop {
+                width: 471px;
+                max-height: 265px;
+                top: 23px;
+                left: 24px;
+                overflow: hidden;
+                .content-desktop {
+                    width: 100%;
+                    max-height: 306px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding-right: 0;
+                    img {
+                        width: 105%;
+                    }
+                }
+            }
+        }
+        .phone {
+            position: absolute;
+            background-image: url(../images/iphone.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            .screen-phone {
+                position: relative;
+                width: 182px;
+                max-height: 298px;
+                top: 47px;
+                left: 10px;
+                overflow: hidden;
+                .content-phone {
+                    width: 100%;
+                    max-height: 298px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding-right: 0;
+                    img {
+                        max-width: 114%;
+                    }
+                }
+            }
+        }
+        @include desktop {
+            background-color: red;
+            .desktop {
+                .screen-desktop {
+                    .content-desktop {
+
+                    }
+                }
+            }
+            .phone {
+                .screen-phone {
+                    .content-phone {
+
+                    }
+                }
+            }
+        }
+        @include laptop {
+            background-color: green;
+            .desktop {
+                top: 50%;
+                transform: translateY(-50%);
+                left: 2%;
+                width: 520px;
+                height: 420px;
+                .screen-desktop {
+                    .content-desktop {
+
+                    }
+                }
+            }
+            .phone {
+                width: 200px;
+                height: 400px;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 2%;
+                .screen-phone {
+                    .content-phone {
+
+                    }
+                }
+            }
+        }
+        @include tablet {
+            width: 100%;
+            height: 60%;
+            background-color: yellow;
+            .desktop {
+                left: 2%;
+                width: 500px;
+                height: 400px;
+
+                top: 50%;
+                transform: translateY(-50%);
+                .screen-desktop {
+                    width: 448px;
+                    max-height: 252px;
+                    top: 22px;
+                    left: 23px;
+                    .content-desktop {
+
+                    }
+                }
+            }
+            .phone {
+                width: 200px;
+                height: 400px;
+                right: 2%;
+
+                top: 50%;
+                transform: translateY(-50%);
+                .screen-phone {
+                    width: 181px;
+                    max-height: 297px;
+                    .content-phone {
+
+                    }
+                }
+            }
+        }
+        @include mobile {
+            width: 100%;
+            height: 60%;
+            background-color: blue;
+            .desktop {
+                .screen-desktop {
+                    .content-desktop {
+
+                    }
+                }
+            }
+            .phone {
+                .screen-phone {
+                    .content-phone {
+
+                    }
+                }
+            }
+        }
+    }
+    .popup-text {
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $background-color-dark;
+        box-shadow: -2px -2px 20px rgba(0, 0, 0, .3);
+        .popup-text-wrapper {
+            top: 30%;
+            padding: 0 30px;
+            h1 {
+                @include font("OpenSans-Bold", 36px, $primary-text-color, bold);
+            }
+            h2 {
+                @include font("OpenSans-Regular", 24px, $secondary-text-color, normal);
+            }
+            p {
+                @include font("OpenSans-Regular", 12px, $secondary-text-color, normal);
+            }
+        }
+        @include tablet {
+            width: 100%;
+            height: 40%;
+            top: auto;
+            bottom: 0;
+            .popup-text-wrapper {
+                top: 10%;
+            }
+        }
+        @include mobile {
+            width: 100%;
+            height: 40%;
+            top: auto;
+            bottom: 0;
+            .popup-text-wrapper {
+                top: 10%;
+            }
+        }
+    }
+}

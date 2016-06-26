@@ -460,281 +460,17 @@ i {
     bottom: 20px; }
   100% {
     bottom: 0px; } }
-.portfolio {
-  /* ul {
-      overflow: hidden;
-      text-align: center;
-      li {
-          line-height: 100px;
-          display: inline-block;
-          padding: 0 20px;
-          text-transform: uppercase;
-          color: $cor-primaria;
-          cursor: pointer;
-          &:hover {
-              color: $cor-secundaria;
-          }
-      }
-  } */ }
-  .portfolio .article-wrapper {
-    width: 100%;
-    height: 80%;
-    overflow: hidden; }
-    .portfolio .article-wrapper article {
-      width: 25%;
-      overflow: hidden;
-      float: left;
-      cursor: pointer;
-      -webkit-transform: transale3d(0, 0, 0);
-      -moz-transform: transale3d(0, 0, 0);
-      transform: transale3d(0, 0, 0); }
-      .portfolio .article-wrapper article:before {
-        padding-top: 100%;
-        display: block;
-        content: ''; }
-      .portfolio .article-wrapper article:hover .subtitle {
-        max-height: 110px; }
-      .portfolio .article-wrapper article:hover img {
-        top: -1000px;
-        -webkit-filter: brightness(50%);
-        -moz-filter: brightness(50%);
-        filter: brightness(50%); }
-      .portfolio .article-wrapper article figure {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0; }
-        .portfolio .article-wrapper article figure img {
-          position: relative;
-          width: 100%;
-          top: 0;
-          transform: transale3d(0, 0, 0);
-          transition: top 5s ease-in-out, -webkit-filter .4s ease-in-out; }
-        .portfolio .article-wrapper article figure .subtitle {
-          max-height: 0px;
-          width: 100%;
-          position: absolute;
-          bottom: -5px;
-          left: 0;
-          background-color: #fff;
-          border-top: 5px solid rgba(0, 0, 0, 0.8);
-          box-sizing: content-box;
-          overflow: hidden;
-          transition: all .4s ease-in-out; }
-          .portfolio .article-wrapper article figure .subtitle h3 {
-            padding: 10px;
-            margin: 0; }
-          .portfolio .article-wrapper article figure .subtitle p {
-            padding: 10px 10px;
-            margin: 0;
-            margin-bottom: 5px; }
-      @media (min-width: 1001px) and (max-width: 1400px) {
-        .portfolio .article-wrapper article {
-          width: 50%; } }
-      @media (min-width: 601px) and (max-width: 1000px) {
-        .portfolio .article-wrapper article {
-          width: 50%; } }
-      @media (min-width: 0px) and (max-width: 600px) {
-        .portfolio .article-wrapper article {
-          width: 100%; } }
-
-.popupPortfolio {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 850; }
-  .popupPortfolio > * {
-    display: none;
-    height: 100%; }
-  .popupPortfolio .popup-esq {
-    width: 50%;
-    float: left; }
-    .popupPortfolio .popup-esq img {
-      width: 100%; }
-    @media (min-width: 0px) and (max-width: 600px) {
-      .popupPortfolio .popup-esq {
-        width: 100%;
-        height: 50%; } }
-  .popupPortfolio .popup-dir {
-    width: 50%;
-    height: 100%;
-    float: left;
-    background-color: #fff; }
-    .popupPortfolio .popup-dir .wrapper-pop-text {
-      width: 90%;
-      margin: 0 auto;
-      transform: translateY(-50%);
-      top: 50%; }
-      .popupPortfolio .popup-dir .wrapper-pop-text * {
-        padding: 10px 0; }
-        @media (min-width: 0px) and (max-width: 600px) {
-          .popupPortfolio .popup-dir .wrapper-pop-text * {
-            padding: 5px 0; } }
-      .popupPortfolio .popup-dir .wrapper-pop-text .popup-tags {
-        border-top: 1px solid #cecece;
-        border-bottom: 1px solid #cecece; }
-      @media (min-width: 0px) and (max-width: 600px) {
-        .popupPortfolio .popup-dir .wrapper-pop-text h1 {
-          margin: 5px 0; } }
-    .popupPortfolio .popup-dir .closePortfolio {
-      cursor: pointer;
-      position: absolute;
-      top: 40px;
-      right: 50px;
-      font-size: 20px; }
-    @media (min-width: 0px) and (max-width: 600px) {
-      .popupPortfolio .popup-dir {
-        width: 100%;
-        height: 50%;
-        font-size: 12px; } }
-
-.popup {
-  position: relative;
-  width: 100%;
-  height: 100%; }
-  .popup .popup-devices {
-    width: 60%;
-    height: 100%; }
-    .popup .popup-devices .desktop {
-      background-image: url(../images/desktop.jpg);
-      background-size: contain;
-      background-repeat: no-repeat; }
-      .popup .popup-devices .desktop .screen-desktop {
-        width: 471px;
-        max-height: 265px;
-        top: 23px;
-        left: 24px;
-        overflow: hidden; }
-        .popup .popup-devices .desktop .screen-desktop .content-desktop {
-          width: 100%;
-          max-height: 306px;
-          overflow-y: scroll;
-          overflow-x: hidden;
-          padding-right: 0; }
-          .popup .popup-devices .desktop .screen-desktop .content-desktop img {
-            width: 105%; }
-    .popup .popup-devices .phone {
-      position: absolute;
-      background-image: url(../images/iphone.png);
-      background-size: contain;
-      background-repeat: no-repeat; }
-      .popup .popup-devices .phone .screen-phone {
-        position: relative;
-        width: 182px;
-        max-height: 298px;
-        top: 47px;
-        left: 10px;
-        overflow: hidden; }
-        .popup .popup-devices .phone .screen-phone .content-phone {
-          width: 100%;
-          max-height: 298px;
-          overflow-y: scroll;
-          overflow-x: hidden;
-          padding-right: 0; }
-          .popup .popup-devices .phone .screen-phone .content-phone img {
-            max-width: 114%; }
-    @media (min-width: 1401px) {
-      .popup .popup-devices {
-        background-color: red; } }
-    @media (min-width: 1001px) and (max-width: 1400px) {
-      .popup .popup-devices {
-        background-color: green; }
-        .popup .popup-devices .desktop {
-          top: 50%;
-          transform: translateY(-50%);
-          left: 2%;
-          width: 520px;
-          height: 420px; }
-        .popup .popup-devices .phone {
-          width: 200px;
-          height: 400px;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 2%; } }
-    @media (min-width: 601px) and (max-width: 1000px) {
-      .popup .popup-devices {
-        width: 100%;
-        height: 60%;
-        background-color: yellow; }
-        .popup .popup-devices .desktop {
-          left: 2%;
-          width: 500px;
-          height: 400px;
-          top: 50%;
-          transform: translateY(-50%); }
-          .popup .popup-devices .desktop .screen-desktop {
-            width: 448px;
-            max-height: 252px;
-            top: 22px;
-            left: 23px; }
-        .popup .popup-devices .phone {
-          width: 200px;
-          height: 400px;
-          right: 2%;
-          top: 50%;
-          transform: translateY(-50%); }
-          .popup .popup-devices .phone .screen-phone {
-            width: 181px;
-            max-height: 297px; } }
-    @media (min-width: 0px) and (max-width: 600px) {
-      .popup .popup-devices {
-        width: 100%;
-        height: 60%;
-        background-color: blue; } }
-  .popup .popup-text {
-    width: 40%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #e5e5e5;
-    box-shadow: -2px -2px 20px rgba(0, 0, 0, 0.3); }
-    .popup .popup-text .popup-text-wrapper {
-      top: 30%;
-      padding: 0 30px; }
-      .popup .popup-text .popup-text-wrapper h1 {
-        font-family: "OpenSans-Bold";
-        font-size: 36px;
-        color: #212121;
-        font-weight: bold; }
-      .popup .popup-text .popup-text-wrapper h2 {
-        font-family: "OpenSans-Regular";
-        font-size: 24px;
-        color: #727272;
-        font-weight: normal; }
-      .popup .popup-text .popup-text-wrapper p {
-        font-family: "OpenSans-Regular";
-        font-size: 12px;
-        color: #727272;
-        font-weight: normal; }
-    @media (min-width: 601px) and (max-width: 1000px) {
-      .popup .popup-text {
-        width: 100%;
-        height: 40%;
-        top: auto;
-        bottom: 0; }
-        .popup .popup-text .popup-text-wrapper {
-          top: 10%; } }
-    @media (min-width: 0px) and (max-width: 600px) {
-      .popup .popup-text {
-        width: 100%;
-        height: 40%;
-        top: auto;
-        bottom: 0; }
-        .popup .popup-text .popup-text-wrapper {
-          top: 10%; } }
-
-.portfolio2 .wrapper {
+.portfolio .wrapper {
   width: 90%;
   margin: 0 auto; }
-  .portfolio2 .wrapper article {
+  .portfolio .wrapper article {
     overflow: hidden;
-    margin: 50px 0; }
-    .portfolio2 .wrapper article aside {
+    margin: 50px 0;
+    overflow: hidden; }
+    .portfolio .wrapper article h1, .portfolio .wrapper article h2, .portfolio .wrapper article p {
+      display: inline; }
+    .portfolio .wrapper article aside {
+      cursor: pointer;
       background-image: url(../images/port1-desktop.jpg);
       background-size: contain;
       background-repeat: no-repeat;
@@ -743,44 +479,44 @@ i {
       min-height: 400px;
       float: right; }
       @media (min-width: 1001px) and (max-width: 1400px) {
-        .portfolio2 .wrapper article aside {
+        .portfolio .wrapper article aside {
           background-image: url(../images/port1-laptop.jpg); } }
       @media (min-width: 601px) and (max-width: 1000px) {
-        .portfolio2 .wrapper article aside {
+        .portfolio .wrapper article aside {
           background-image: url(../images/port1-tablet.jpg); } }
       @media (min-width: 0px) and (max-width: 600px) {
-        .portfolio2 .wrapper article aside {
+        .portfolio .wrapper article aside {
           background-image: url(../images/port1-tablet.jpg);
           float: none;
           margin: 0 auto;
           width: 90%; } }
   @media (min-width: 1401px) {
-    .portfolio2 .wrapper {
+    .portfolio .wrapper {
       min-width: 1400px; }
-      .portfolio2 .wrapper .d {
+      .portfolio .wrapper .d {
         display: block; }
-      .portfolio2 .wrapper .l, .portfolio2 .wrapper .t, .portfolio2 .wrapper .p {
+      .portfolio .wrapper .l, .portfolio .wrapper .t, .portfolio .wrapper .p {
         display: none; } }
   @media (min-width: 1001px) and (max-width: 1400px) {
-    .portfolio2 .wrapper {
+    .portfolio .wrapper {
       min-width: 1000px; }
-      .portfolio2 .wrapper .l {
-        display: block; }
-      .portfolio2 .wrapper .d, .portfolio2 .wrapper .t, .portfolio2 .wrapper .p {
+      .portfolio .wrapper .l {
+        display: inline; }
+      .portfolio .wrapper .d, .portfolio .wrapper .t, .portfolio .wrapper .p {
         display: none; } }
   @media (min-width: 601px) and (max-width: 1000px) {
-    .portfolio2 .wrapper {
+    .portfolio .wrapper {
       min-width: 500px; }
-      .portfolio2 .wrapper .t {
-        display: block; }
-      .portfolio2 .wrapper .d, .portfolio2 .wrapper .l, .portfolio2 .wrapper .p {
+      .portfolio .wrapper .t {
+        display: inline; }
+      .portfolio .wrapper .d, .portfolio .wrapper .l, .portfolio .wrapper .p {
         display: none; } }
   @media (min-width: 0px) and (max-width: 600px) {
-    .portfolio2 .wrapper {
+    .portfolio .wrapper {
       min-width: 300px; }
-      .portfolio2 .wrapper .p {
-        display: block; }
-      .portfolio2 .wrapper .d, .portfolio2 .wrapper .l, .portfolio2 .wrapper .t {
+      .portfolio .wrapper .p {
+        display: inline; }
+      .portfolio .wrapper .d, .portfolio .wrapper .l, .portfolio .wrapper .t {
         display: none; } }
 
 .pros {
@@ -1084,7 +820,7 @@ i {
 .project {
   margin-bottom: 50px; }
   .project .project-hero {
-    background-image: url("../images/projeto1/mockDrop_MacBook%20Pro (1).jpg");
+    background-image: url("../images/projeto1/mockDrop_MacBook%20Pro%20(1).jpg");
     background-size: cover;
     background-position: center center;
     min-height: 600px;
