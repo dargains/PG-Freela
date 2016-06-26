@@ -1144,6 +1144,11 @@ i {
     color: #212121;
     font-weight: normal;
     margin: 10px 0; }
+  .project .container ul {
+    margin: 0 10px;
+    padding: 0 10px; }
+    .project .container ul li {
+      list-style: square; }
   .project .container img {
     width: 100%; }
 
