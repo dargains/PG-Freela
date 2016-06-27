@@ -7,7 +7,6 @@
             border-bottom: 1px solid $background-color-dark;
             @include breakpoint(sm) {
                 border-bottom: 1px solid $background-color-dark;
-                
                 &:nth-child(2) {
                     border-right: none;
                 }
@@ -15,7 +14,6 @@
             @include breakpoint(xs-all) {
                 border-bottom: 1px solid $background-color-dark;
             }
-
             &:last-child {
                 border-right: none;
             }
@@ -35,9 +33,16 @@
                     padding-bottom: 15px;
                 }
                 p {
+                    min-height: 140px;
                     line-height: 160%;
                     @include font("OpenSans-Regular", 14px, $secondary-text-color, normal);
                     letter-spacing: 1px;
+                    @include breakpoint(sm) {
+                        
+                    }
+                    @include breakpoint(xs-all) {
+                        min-height: auto;
+                    }
                 }
             }
         }

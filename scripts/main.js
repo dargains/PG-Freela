@@ -253,8 +253,8 @@ $(document).ready(function () {
         $('*[key]').each(function (i) {
             tagName = $(this).prop("tagName");
             text = $(this).text();
-            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
-            console.log(text);
+//            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
+            console.log($(this).attr('key'));
 
             $(this).text(aLangKeys[lang][$(this).attr('key')]);
         });
