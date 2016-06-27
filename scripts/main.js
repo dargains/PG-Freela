@@ -244,21 +244,32 @@ $(document).ready(function () {
     aLangKeys['pt']['footer-p-2'] = 'por Studio Tagus :)';
 
 
+    var lang = "en";
+    console.log(lang);
     // onclick behavior
     $('.lang').click(function () {
 
-        var lang = $(this).attr('id'); // obtain language id
+        lang = $(this).attr('id'); // obtain language id
         console.log ("lang, inside, is: " + lang)
+        
         // translate all elements that has a key
         $('*[key]').each(function (i) {
             tagName = $(this).prop("tagName");
+            if(tagName === "INPUT"){
+                alert("h");
+            }
             text = $(this).text();
+            console.log(tagName);
 //            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
-            console.log($(this).attr('key'));
+//            console.log($(this).attr('key'));
 
             $(this).text(aLangKeys[lang][$(this).attr('key')]);
         });
 
+    });
+    
+    var changeLang = function({
+        
     });
 
     /* ----------- EXPERTISE LIST ~ SHOW AND HIDE CONTENT -------------- */
