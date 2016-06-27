@@ -193,7 +193,9 @@ $(document).ready(function () {
     aLangKeys['en']['reach-us-h2-second'] = '';
     aLangKeys['en']['footer-p-1'] = '';
     aLangKeys['en']['footer-p-2'] = '';
-
+    aLangKeys['en']['placeholder-name'] = 'Name *';
+    aLangKeys['en']['placeholder-email'] = 'E-mail *';
+    aLangKeys['en']['placeholder-msg'] = 'Message';
 
 
     aLangKeys['pt']['menu-about'] = 'Sobre nós';
@@ -211,8 +213,8 @@ $(document).ready(function () {
     aLangKeys['pt']['pros-h2-3'] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.';
     aLangKeys['pt']['pros-h1-4'] = 'Profissionalismo';
     aLangKeys['pt']['pros-h2-4'] = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam illum, minima doloremque culpa magnam mollitia.';
-    aLangKeys['pt']['quote-h1'] = 'We grow brands by making decisions that are rooted in business strategy.';
-    aLangKeys['pt']['quote-action'] = "Let's work together ";
+    aLangKeys['pt']['quote-h1'] = 'Faça com que seus sonhos deixem de ser sonhos.';
+    aLangKeys['pt']['quote-action'] = "Fale connosco";
     aLangKeys['pt']['portfolio-h1'] = 'Portfólio';
     aLangKeys['pt']['portfolio-h2'] = 'Nossos trabalhos mais recentes Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium neque porro tempore facere, culpa vel.';
     aLangKeys['pt']['port-work-1-h1'] = 'Imagem 1';
@@ -242,9 +244,12 @@ $(document).ready(function () {
     aLangKeys['pt']['reach-us-h2-second'] = 'Texto motivando cliente a contactar ';
     aLangKeys['pt']['footer-p-1'] = 'Feito com';
     aLangKeys['pt']['footer-p-2'] = 'por Studio Tagus :)';
+    aLangKeys['pt']['placeholder-name'] = 'Nome *';
+    aLangKeys['pt']['placeholder-email'] = 'E-mail *';
+    aLangKeys['pt']['placeholder-msg'] = 'Mensagem';
 
 
-    var lang = "en";
+    var lang = "pt";
     console.log(lang);
     // onclick behavior
     $('.lang').click(function () {
@@ -255,35 +260,47 @@ $(document).ready(function () {
         // translate all elements that has a key
         $('*[key]').each(function (i) {
             tagName = $(this).prop("tagName");
-            if(tagName === "INPUT"){
-                alert("h");
-            }
+
             text = $(this).text();
             console.log(tagName);
 //            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
 //            console.log($(this).attr('key'));
-
-            $(this).text(aLangKeys[lang][$(this).attr('key')]);
+            console.log("click dentro do lang: " + click);
+            if(tagName === "INPUT" || tagName === "TEXTAREA"){
+                $(this).attr("placeholder", aLangKeys[lang][$(this).attr('key')]);
+            } else {
+                $(this).text(aLangKeys[lang][$(this).attr('key')]);
+            }
+            
         });
 
     });
     
-    var changeLang = function({
-        
-    });
+
 
     /* ----------- EXPERTISE LIST ~ SHOW AND HIDE CONTENT -------------- */
 
     size_li = $("#expertise .row").size();
-    start = 1;
-    add = 1;
-    click = 1;
-    phrase = ['Calma, temos mais bons motivos!', 'Sim, ainda mais!', 'yay!', 'Ótimos motivos, uh?', 'é... chegamos ao fim'];
+    start = 1; //how many rows it starts showing
+    add = 1; //how many rows are added per click
+    click = 1; //how many times the button was clicked
+    
+    var phrase = new Array();
 
+    phrase['pt'] = new Array();
+    phrase['en'] = new Array();
+    
+    phrase ['pt'] [0] = "msg 1 pt";
+    phrase ['pt'] [1] = "msg 2 pt";
+    phrase ['pt'] [2] = "msg 3 pt";
 
+    phrase ['en'] [0] = "msg 1 en";
+    phrase ['en'] [1] = "msg 2 en";
+    phrase ['en'] [2] = "msg 3 en";
+    
     $('#expertise .row:lt(' + start + ')').show();
     $('#loadMore').click(function (e) {
-
+        console.log ("dentro do clique: " + lang + ". Estás no clique: " +click);
         click++;
         e.preventDefault();
         start = (start + add <= size_li) ? start + add : size_li;
@@ -292,20 +309,14 @@ $(document).ready(function () {
                 console.log("lang is: " + lang)
 //                $("#loadMore").text(aLangKeys[lang]['footer-p-2']);
 //                $('#loadMore').text(aLangKeys['pt']['footer-p-2' + (click - 2)]);
-                $('#loadMore').text(phrase[click - 2]);
+                $('#loadMore').text(phrase[lang][click - 2]);
             }, 1500);
 
         });
 
     });
 
-    /* ----- POPUP DEVICE SCREEN FIX ------------- */
-    var phone = $(".phone")
-        , pcontent = $(".content-phone")
-        , dcontent = $(".content-desktop")
-        , slider = phone.innerWidth() - pcontent.innerWidth();
-    dcontent.css("padding-right", slider + "px");
-    pcontent.css("padding-right", slider + "px");
+
 });
 
 
