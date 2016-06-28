@@ -8,7 +8,22 @@
 
 <url>
   <loc>http://studiotagus.com/</loc>
-  <lastmod>2016-06-25T10:38:10+00:00</lastmod>
-  <changefreq>always</changefreq>
+  <lastmod>2016-06-28T23:06:08+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://studiotagus.com/projects/arval.html</loc>
+  <lastmod>2016-06-28T23:08:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://studiotagus.com/projects/food.html</loc>
+  <lastmod>2016-06-28T23:08:02+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://studiotagus.com/index.html</loc>
+  <lastmod>2016-06-28T23:06:08+00:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>
