@@ -2,104 +2,146 @@
     .wrapper {
         width: 90%;
         margin: 0 auto;
-        article {
-            display: none;
-            margin: 50px 0;
-            overflow: hidden;
-            h1,
-            h2,
-            p {
-                display: block;
-                width: 40%;
-            }
-            aside {
-                cursor: pointer;
-                background-image: url(../images/port1-desktop.jpg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center center;
-                width: 60%;
-                min-height: 400px;
-                float: right;
-                @include laptop {
-                    background-image: url(../images/port1-laptop.jpg);
+        .slick-port {
+            article {
+                margin: 50px 0;
+                overflow: hidden;
+                h1,
+                h2,
+                p {
+                    display: block;
+                    width: 40%;
+                    @include mobile {
+                        width: auto;
+                    }
                 }
-                @include tablet {
-                    background-image: url(../images/port1-tablet.jpg);
+                aside {
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    width: 60%;
+                    min-height: 400px;
+                    float: right;
+                    img {
+                        display: none;
+                        width: 90%;
+                        text-align: right;
+                        @include desktop {
+                            &.portdesktop {
+                                display: block;
+                            }
+                            &.portlaptop {
+                                display: none;
+                            }
+                            &.porttablet {
+                                display: none;
+                            }
+                        }
+                        @include laptop {
+
+                            &.portdesktop {
+                                display: none;
+                            }
+                            &.portlaptop {
+                                display: block;
+                            }
+                            &.porttablet {
+                                display: none;
+                            }
+                        }
+                        @include tablet {
+
+                            &.portdesktop {
+                                display: none;
+                            }
+                            &.portlaptop {
+                                display: none;
+                            }
+                            &.porttablet {
+                                display: block;
+                            }
+                        }
+                        @include mobile {
+                            &.portdesktop {
+                                display: none;
+                            }
+                            &.portlaptop {
+                                display: none;
+                            }
+                            &.porttablet {
+                                display: block;
+                            }
+                        }
+                    }
+                    @include mobile {
+
+                            float: none;
+                            margin: 0 auto;
+                            width: 90%;
+                    }
+                }
+                a {
+                    margin-top: 20px;
+                    @include mobile {
+                        display: block;
+                        text-align: center;
+                    }
                 }
                 @include mobile {
-                    background-image: url(../images/port1-tablet.jpg);
-                    float: none;
-                    margin: 0 auto;
-                    width: 90%;
-                }
-            }
-            &:first-of-type {
-                display: block;
-            }
-        }
-        ul {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50px);
-            bottom: 20px;
-            li {
-                display: inline-block;
-                width: 10px;
-                height: 10px;
-                background-color: #fff;
-                border: 1px solid $divider-color;
-                text-indent: -1000px;
-                overflow: hidden;
-                cursor: pointer;
-                &:hover,
-                &.selected {
-                    background-color: $divider-color;
+                    padding: 0 10px;
                 }
             }
         }
         @include desktop {
             min-width: 1400px;
-            .d {
-                display: block;
-            }
-            .l,
-            .t,
-            .p {
-                display: none;
+            .slick-port {
+                .d {
+                    display: block;
+                }
+                .l,
+                .t,
+                .p {
+                    display: none;
+                }
             }
         }
         @include laptop {
             min-width: 1000px;
-            .l {
-                display: inline;
-            }
-            .d,
-            .t,
-            .p {
-                display: none;
+            .slick-port {
+                .l {
+                    display: inline;
+                }
+                .d,
+                .t,
+                .p {
+                    display: none;
+                }
             }
         }
         @include tablet {
             min-width: 500px;
-            .t {
-                display: inline;
-            }
-            .d,
-            .l,
-            .p {
-                display: none;
+            .slick-port {
+                .t {
+                    display: inline;
+                }
+                .d,
+                .l,
+                .p {
+                    display: none;
+                }
             }
         }
         @include mobile {
             min-width: 300px;
-            .p {
-                display: inline;
-            }
-            .d,
-            .l,
-            .t {
-                display: none;
+            .slick-port {
+                .p {
+                    display: inline;
+                }
+                .d,
+                .l,
+                .t {
+                    display: none;
+                }
             }
         }
     }

@@ -1,13 +1,5 @@
 $(document).ready(function () {
 
-
-    /* ~~~~~~~~~~~ PORTFOLIO ~~~~~~~~~~~~ */
-    $(".portfolio .wrapper article aside").on('click', function() {
-        var clicked = $(this).parent().index();
-        clicked++;
-        window.location.href = 'project' + clicked + '.html';
-    });
-
     $(".slick-port").slick();
 
     // left: 37, up: 38, right: 39, down: 40,
@@ -349,7 +341,7 @@ $(window).load(function () {
             c += 1;
             if (c >= q.length) clearInterval(i);
         }, 200);
-    $(".tr").delay(2000).html("TAGUS").hide().fadeIn(1700);
+    $(".tr").delay(1300).html("TAGUS").hide().fadeIn(1700);
     $(".hero .wrapper-hero").css("border-width", "2px").fadeIn(2000);
     }, 500);
     
