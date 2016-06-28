@@ -8,7 +8,7 @@
     <meta name="description" content="Studio Tagus" />
     <meta name="robots" content="index, follow" />
     <meta name="revisit-after" content="1 month">
-    <title>Studio Tagus - Project page</title>
+    <title>Studio Tagus - Arval Máquinas Gráficas</title>
     <meta name="description" content="Studio Tagus - Web Development Studio based in Lisbon, PT." />
     <meta name="keywords" content="Studio, Tagus, Web, Development, html, css, javascript, jquery, template, wordpress, design" />
     <meta name="robots" content="index, follow" />
@@ -51,7 +51,7 @@
     </script>
 </head>
 
-<body>
+<body class="single">
     <header>
         <span class="menu_toggle">
             <i class="menu_open fa fa-bars fa-lg"></i>
@@ -60,31 +60,32 @@
 
         <nav>
             <ul class="menu_items">
-                <li id="menu-about"><a href="#"><i class="icon fa fa-signal fa-2x"></i><span key="menu-about">Sobre nós</span></a></li>
-                <li id="menu-portfolio"><a href="#"><i class="icon fa fa-coffee fa-2x"></i><span key="menu-portfolio">Portfólio</span></a></li>
-                <li id="menu-expertise"><a href="#" key="menu-expertise"><i class="icon fa fa-heart fa-2x"></i><span key="menu-expertise">Razões</span></a></li>
+                <li id="menu-about"><a href="#"><i class="icon fa fa-signal fa-2x"></i><span key="menu-about">Interface</span></a></li>
+                <li id="menu-portfolio"><a href="#"><i class="icon fa fa-coffee fa-2x"></i><span key="menu-portfolio">Design</span></a></li>
+                <li id="menu-expertise"><a href="#" key="menu-expertise"><i class="icon fa fa-heart fa-2x"></i><span key="menu-expertise">Responsive</span></a></li>
                 <li id="menu-contact"><a href="#" key="menu-contact"><i class="icon fa fa-whatsapp fa-2x"></i> Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="project">
-        <div class="project-hero">
-            <h1>Nome do projeto</h1>
+        <div class="project-hero" style="background-image: url('../images/arval/arval-hero.jpg');">
+            <div class="project-hero-mask"></div>
+            <h1>Arval Máquinas Gráficas</h1>
         </div>
 
         <aside class="col-sm-3 col-xs-12">
             <div class="row">
                 <p>Skills utilizadas</p>
                 <ul class="techs">
-                    <li><a href="#">CSS</a></li>
-                    <li><a href="#">SASS</a></li>
-                    <li><a href="#">Planeamento e wireframe</a></li>
-                    <li><a href="#">blablabla</a></li>
+                    <li>CSS</li>
+                    <li>SASS</li>
+                    <li>Planeamento e wireframe</li>
+                    <li>blablabla</li>
                 </ul>
                 <p>Outros projetos</p>
                 <ul class="more-projects">
-                    <li><a href="#">Projeto 1</a></li>
+                    <li><a href="food.html">Food Delivery</a></li>
                     <li><a href="#">Projeto 2</a></li>
                     <li><a href="#">Projeto 3</a></li>
                 </ul>
@@ -98,7 +99,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo vitae quos facere nihil temporibus quidem recusandae, architecto dolorem dolores. Perspiciatis animi provident dolorem nobis dolorum nostrum, labore ipsam aut pariatur?</p>
                     <h3>Informações importantes</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur quasi at repellat nemo suscipit iure id nobis amet! Est suscipit, aspernatur eos quia adipisci, temporibus reiciendis nisi perferendis atque.</p>
-                    <p>Pontos relevantes</p>
+                    <p>Pontos relevantes:</p>
                     <ul>
                         <li>bla</li>
                         <li>ble</li>
@@ -109,24 +110,33 @@
                 </div>
                 <div class="col-xs-12">
                     <h3>Interface</h3>
-                    <img src="../images/projeto1/mockDrop_MacBook%20Pro.jpg" alt="">
+                    <img src="../images/arval/arval-mock-tablet.jpg" alt="">
 
-                    <h3>Páginas internas</h3>
+                    <h3>Design</h3>
                     <p>Cada página do projeto foi cuidadosamente pensada para ser coerente para com a identidade do projeto.</p>
-                    <img src="../images/projeto1/mockDrop_iPad%20on%20desk.jpg" alt="">
-
-                    <h3>Devices (responsividade)</h3>
+                    <a href="../images/arval/arval-desk.png" class="btn-dark" target="_blank">Interface desktop</a>
+                    <a href="../images/arval/arval-mob.png" class="btn-dark" target="_blank">Interface mobile</a>
+                    <h3>Responsividade</h3>
                     <p>Layout responsivo para desktops, laptops, tablets e telemóveis.</p>
-                    <img src="../images/projeto1/mockDrop_iPhone%205.jpg" alt="">
+                    <img src="../images/arval/arval-mock-mob.jpg" alt="">
+                    <img src="../images/arval/arval-mock-laptop.jpg" alt="">
                 </div>
             </div>
         </div>
 
         </div>
     </section>
+    <section class="quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a key="quote-action" href="../index.html" class="drop-to-contact btn-light">Voltar à home</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="contact">
         <span id="contact-start"></span>
-
         <section class="title-subtitle">
             <div class="container">
                 <div class="row">
@@ -139,7 +149,6 @@
                 </div>
             </div>
         </section>
-
         <div class="container">
             <div class="row">
                 <div class="contact-details col-md-6 col-xs-6">
@@ -191,6 +200,7 @@
     </section>
     <!--SCRIPT-->
     <script type="text/javascript" src="../scripts/vendor/jquery-2.1.4.min.js"></script>
+    <script src="../scripts/vendor/slick.min.js"></script>
     <script src="../scripts/main.js"></script>
 </body>
 

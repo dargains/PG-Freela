@@ -10,7 +10,7 @@
                 h2,
                 p {
                     display: block;
-                    width: 40%;
+                    width: 37%;
                     @include mobile {
                         width: auto;
                     }
@@ -20,12 +20,11 @@
                     background-repeat: no-repeat;
                     background-position: center center;
                     width: 60%;
-                    min-height: 400px;
+                    min-height: 380px;
                     float: right;
                     img {
                         display: none;
                         width: 90%;
-                        text-align: right;
                         @include desktop {
                             &.portdesktop {
                                 display: block;
@@ -94,55 +93,15 @@
         }
         @include desktop {
             min-width: 1400px;
-            .slick-port {
-                .d {
-                    display: block;
-                }
-                .l,
-                .t,
-                .p {
-                    display: none;
-                }
-            }
         }
         @include laptop {
             min-width: 1000px;
-            .slick-port {
-                .l {
-                    display: inline;
-                }
-                .d,
-                .t,
-                .p {
-                    display: none;
-                }
-            }
         }
         @include tablet {
             min-width: 500px;
-            .slick-port {
-                .t {
-                    display: inline;
-                }
-                .d,
-                .l,
-                .p {
-                    display: none;
-                }
-            }
         }
         @include mobile {
             min-width: 300px;
-            .slick-port {
-                .p {
-                    display: inline;
-                }
-                .d,
-                .l,
-                .t {
-                    display: none;
-                }
-            }
         }
     }
 }
