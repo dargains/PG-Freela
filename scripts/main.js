@@ -286,18 +286,15 @@ $(document).ready(function () {
     phrase['pt'] = new Array();
     phrase['en'] = new Array();
 
-    phrase['pt'][0] = "msg 1 pt";
-    phrase['pt'][1] = "msg 2 pt";
-    phrase['pt'][2] = "msg 3 pt";
+    phrase['pt'][0] = "mostrar mais";
 
-    phrase['en'][0] = "msg 1 en";
-    phrase['en'][1] = "msg 2 en";
-    phrase['en'][2] = "msg 3 en";
+    phrase['en'][0] = "show more";
 
     $('#expertise .row:lt(' + start + ')').show();
     $('#loadMore').click(function (e) {
         console.log("dentro do clique: " + lang + ". Estás no clique: " + click);
         click++;
+        if (click > 2) {$(this).hide()}
         e.preventDefault();
         start = (start + add <= size_li) ? start + add : size_li;
         $('#expertise .row:lt(' + start + ')').slideDown(1500, function () {

@@ -685,6 +685,9 @@ i {
           text-align: center;
           margin: 0; } }
 
+.title-port {
+  background: #fff; }
+
 /* .contact {
     .title-subtitle {
         background: $background-color-dark;

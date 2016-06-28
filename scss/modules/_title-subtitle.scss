@@ -2,7 +2,6 @@
     position: absolute;
     top: 1px;
 }
-
 .title-subtitle {
     background: $background-color-light;
     overflow: hidden;
@@ -56,6 +55,9 @@
     }
 }
 
+.title-port {
+    background: #fff;
+}
 
 /* .contact {
     .title-subtitle {
