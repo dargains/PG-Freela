@@ -7,16 +7,17 @@
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
+    -webkit-filter: brightness(120%);
     .lang-switcher{
         z-index: 998;
+
         position: absolute;
         top: 10px;
         right: 10px;
         img{
-            margin-right: 10px;
             cursor: pointer;
             height: auto;
-            width: 32px;
+            width: 42px;
         }
     }
     .mask-hero {
@@ -34,20 +35,21 @@
     }
     .wrapper-hero {
         z-index: 5;
-        width: 500px;
         top: 50%;
+        width: 330px;
+        height: 230px;
         transform: translateY(-50%);
         margin: 0 auto;
-        text-align: center;
-        background-color: $background-color-dark;
+        text-align: left;
+        padding-left: 42px;
+        border: 0px solid $background-color-light;
         h1 {
+            margin: 0;
             display: inline-block;
-            @include font("OpenSans-Bold", 120px, $divider-color, normal);
-            display: inline-block;
+            @include font("Oswald-light", 100px, $primary-color-text, normal);
             line-height: 100px;
-            margin: 40px 0;
             span {
-                @include font("OpenSans-Condensed-Light", 165px, $secondary-text-color, normal);
+                @include font("OpenSans-Condensed-Light", 100px, $background-color-dark, normal);
             }
         }
         @include tablet {

@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     /* ~~~~~~~~~~~ PORTFOLIO ~~~~~~~~~~~~ */
-    $(".portfolio .wrapper article aside").on('click', function() {
+    $(".portfolio .wrapper article aside").on('click', function () {
         window.location.href = 'project1.html';
     });
 
@@ -129,7 +129,7 @@ $(document).ready(function () {
         });
     });
 
-
+    
 
     /* ----------- MISC -------------- */
 
@@ -255,27 +255,27 @@ $(document).ready(function () {
     $('.lang').click(function () {
 
         lang = $(this).attr('id'); // obtain language id
-        console.log ("lang, inside, is: " + lang)
-        
+        console.log("lang, inside, is: " + lang)
+
         // translate all elements that has a key
         $('*[key]').each(function (i) {
             tagName = $(this).prop("tagName");
 
             text = $(this).text();
             console.log(tagName);
-//            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
-//            console.log($(this).attr('key'));
+            //            console.log("<" + tagName + " key='" + $(this).attr('key') + "'>" + text + "</" + tagName + ">");
+            //            console.log($(this).attr('key'));
             console.log("click dentro do lang: " + click);
-            if(tagName === "INPUT" || tagName === "TEXTAREA"){
+            if (tagName === "INPUT" || tagName === "TEXTAREA") {
                 $(this).attr("placeholder", aLangKeys[lang][$(this).attr('key')]);
             } else {
                 $(this).text(aLangKeys[lang][$(this).attr('key')]);
             }
-            
+
         });
 
     });
-    
+
 
 
     /* ----------- EXPERTISE LIST ~ SHOW AND HIDE CONTENT -------------- */
@@ -284,31 +284,31 @@ $(document).ready(function () {
     start = 1; //how many rows it starts showing
     add = 1; //how many rows are added per click
     click = 1; //how many times the button was clicked
-    
+
     var phrase = new Array();
 
     phrase['pt'] = new Array();
     phrase['en'] = new Array();
-    
-    phrase ['pt'] [0] = "msg 1 pt";
-    phrase ['pt'] [1] = "msg 2 pt";
-    phrase ['pt'] [2] = "msg 3 pt";
 
-    phrase ['en'] [0] = "msg 1 en";
-    phrase ['en'] [1] = "msg 2 en";
-    phrase ['en'] [2] = "msg 3 en";
-    
+    phrase['pt'][0] = "msg 1 pt";
+    phrase['pt'][1] = "msg 2 pt";
+    phrase['pt'][2] = "msg 3 pt";
+
+    phrase['en'][0] = "msg 1 en";
+    phrase['en'][1] = "msg 2 en";
+    phrase['en'][2] = "msg 3 en";
+
     $('#expertise .row:lt(' + start + ')').show();
     $('#loadMore').click(function (e) {
-        console.log ("dentro do clique: " + lang + ". Estás no clique: " +click);
+        console.log("dentro do clique: " + lang + ". Estás no clique: " + click);
         click++;
         e.preventDefault();
         start = (start + add <= size_li) ? start + add : size_li;
         $('#expertise .row:lt(' + start + ')').slideDown(1500, function () {
             setTimeout(function () {
                 console.log("lang is: " + lang)
-//                $("#loadMore").text(aLangKeys[lang]['footer-p-2']);
-//                $('#loadMore').text(aLangKeys['pt']['footer-p-2' + (click - 2)]);
+                    //                $("#loadMore").text(aLangKeys[lang]['footer-p-2']);
+                    //                $('#loadMore').text(aLangKeys['pt']['footer-p-2' + (click - 2)]);
                 $('#loadMore').text(phrase[lang][click - 2]);
             }, 1500);
 
@@ -326,9 +326,28 @@ $(window).load(function () {
     $(".single").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd'
         , function () {
             //doSomething
+
             $('#loader-wrapper').remove();
         });
+    
+    /* ~~~~~~~~~~~ HERO ~~~~~~~~~~~~ */
+
+    setTimeout(function(){
+            var string = "STUDIO"
+        , q = $.map(string.split(''), function (letter) {
+            return $('<span>' + letter + '</span>');
+        });
+
+    var dest = $(".hero .wrapper-hero .studio")
+        , c = 0
+        , i = setInterval(function () {
+            q[c].appendTo(dest).hide().fadeIn(700);
+            c += 1;
+            if (c >= q.length) clearInterval(i);
+        }, 200);
+    $(".tr").delay(2000).html("TAGUS").hide().fadeIn(1700);
+    $(".hero .wrapper-hero").css("border-width", "2px").fadeIn(2000);
+    }, 500);
+    
+
 });
-
-
-/* PRE-LOADER (must be outisde document.ready) */
