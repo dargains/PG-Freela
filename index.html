@@ -25,6 +25,9 @@
     <link rel="icon" type="image/ico" href="" />
     <!--STYLE-->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--SLICK-->
+    <link rel="stylesheet" href="css/vendor/slick.css">
+    <link rel="stylesheet" href="css/vendor/slick-theme.css">
     <!--BOOTSTRAP-->
     <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
     <!--Font awesome-->
@@ -52,12 +55,6 @@
 </head>
 
 <body class="single">
-
-    <!--     <div style="width:150px; margin: 0 auto;"class="lang_switcher">
-        <a id="en" class="lang btn-dark">EN</a>
-
-        <a id="pt" class="lang btn-dark">PT</a>
-    </div> -->
 
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -185,7 +182,7 @@
 
         <!-- PORTFOLIO START -->
         <span id="portfolio-start"></span>
-        <section class="title-subtitle title-subtitle-bg">
+        <section class="title-subtitle">
             <div class="container">
                 <div class="row">
                     <div class="left-block col-sm-6 col-xs-12">
@@ -200,7 +197,8 @@
 
         <section class="portfolio">
             <div class="wrapper">
-                <article id="0">
+               <div class="slick-port">
+                <article>
                     <aside></aside>
                     <h1 class="d">Desktop</h1>
                     <h1 class="l">Laptop</h1>
@@ -210,7 +208,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                 </article>
-                <article id="1">
+                <article>
                     <aside></aside>
                     <h1 class="d">Desktop</h1>
                     <h1 class="l">Laptop</h1>
@@ -220,7 +218,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                 </article>
-                <article id="2">
+                <article>
                     <aside></aside>
                     <h1 class="d">Desktop</h1>
                     <h1 class="l">Laptop</h1>
@@ -230,7 +228,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                 </article>
-                <article id="3">
+                <article>
                     <aside></aside>
                     <h1 class="d">Desktop</h1>
                     <h1 class="l">Laptop</h1>
@@ -240,12 +238,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam debitis cum officia a, in quaerat ea incidunt id fugiat assumenda? Veniam recusandae tempore unde ipsum, possimus totam, quidem eaque nobis.</p>
                 </article>
-                <ul class="paginador">
-                    <li id="btn01" class="selected">Projeto 1</li>
-                    <li id="btn02">Projeto 2</li>
-                    <li id="btn03">Projeto 3</li>
-                    <li id="btn04">Projeto 4</li>
-                </ul>
+                </div>
             </div>
         </section>
         <!-- PORTFOLIO END -->
@@ -420,7 +413,7 @@
 
     <!--SCRIPT-->
     <script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
-    <!-- <script type="text/javascript" src="snap.min.js"></script> -->
+    <script src="scripts/vendor/slick.min.js"></script>
     <script src="scripts/main.js"></script>
 
 </body>

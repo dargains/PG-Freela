@@ -48,6 +48,9 @@
             display: inline-block;
             @include font("Oswald-light", 100px, $primary-color-text, normal);
             line-height: 100px;
+            &.studio {
+                margin-left: -3px;
+            }
             span {
                 @include font("OpenSans-Condensed-Light", 100px, $background-color-dark, normal);
             }
