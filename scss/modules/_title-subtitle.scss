@@ -2,10 +2,27 @@
     position: absolute;
     top: 1px;
 }
+
 .title-subtitle {
     background: $background-color-light;
     overflow: hidden;
-    &.title-subtitle-bg{
+    //Center class
+    &.ts-center {
+        .container {
+            .left-block {
+                border-right: none;
+                width: 100%;
+                h1 {
+                    text-align: center;
+                }
+            }
+            .right-block {
+                display: none;
+            }
+        }
+    }
+    //Change color class
+    &.title-subtitle-bg {
         background: $background-color-extra-light;
     }
     .container {
@@ -58,19 +75,3 @@
 .title-port {
     background: #fff;
 }
-
-/* .contact {
-    .title-subtitle {
-        background: $background-color-dark;
-        .container {
-            margin-top: 0 !important;
-            border-bottom: 1px solid $divider-color;
-
-            .left-block {
-                border-right: 1px solid $divider-color;
-
-            }
-
-        }
-    }
-} */

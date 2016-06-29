@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="pt">
 
 <head>
     <meta charset="utf-8">
@@ -52,6 +52,7 @@
 </head>
 
 <body class="single">
+    <!-- HEADER START -->
     <header>
         <span class="menu_toggle">
             <i class="menu_open fa fa-bars fa-lg"></i>
@@ -60,13 +61,33 @@
 
         <nav>
             <ul class="menu_items">
-                <li id="menu-about"><a href="#"><i class="icon fa fa-signal fa-2x"></i><span key="menu-about">Interface</span></a></li>
-                <li id="menu-portfolio"><a href="#"><i class="icon fa fa-coffee fa-2x"></i><span key="menu-portfolio">Design</span></a></li>
-                <li id="menu-expertise"><a href="#" key="menu-expertise"><i class="icon fa fa-heart fa-2x"></i><span key="menu-expertise">Responsive</span></a></li>
-                <li id="menu-contact"><a href="#" key="menu-contact"><i class="icon fa fa-whatsapp fa-2x"></i> Contato</a></li>
+                <li id="menu-about">
+                    <a href="#">
+                        <i class="icon fa fa-signal fa-2x"></i>
+                        <span key="menu-about">Sobre nós</span>
+                    </a>
+                </li>
+                <li id="menu-portfolio">
+                    <a href="#">
+                        <i class="icon fa fa-coffee fa-2x"></i>
+                        <span key="menu-portfolio">Portfólio</span>
+                    </a>
+                </li>
+                <li id="menu-expertise">
+                    <a href="#">
+                        <i class="icon fa fa-heart fa-2x"></i>
+                        <span key="menu-expertise">Razões</span></a>
+                </li>
+                <li id="menu-contact">
+                    <a href="#">
+                        <i class="icon fa fa-whatsapp fa-2x"></i>
+                        <span key="menu-contact">Portfólio</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+    <!-- HEADER END -->
 
     <section class="project">
         <div class="project-hero" style="background-image: url('../images/arval/arval-hero.jpg');">
@@ -124,7 +145,7 @@
             </div>
         </div>
 
-        </div>
+
     </section>
     <section class="quote">
         <div class="container">
@@ -135,20 +156,23 @@
             </div>
         </div>
     </section>
+    <!-- CONTACT START -->
     <section class="contact">
         <span id="contact-start"></span>
-        <section class="title-subtitle">
+
+        <section class="title-subtitle ts-center">
             <div class="container">
                 <div class="row">
                     <div class="left-block col-sm-6 col-xs-12">
                         <h1 key="contact-h1">Contato</h1>
                     </div>
                     <div class="right-block col-sm-6 col-xs-12">
-                        <h2 key="contact-h2">Deixe-nos uma mensagem, nós somos amigáveis!</h2>
+                        <h2 key="contact-h2"></h2>
                     </div>
                 </div>
             </div>
         </section>
+
         <div class="container">
             <div class="row">
                 <div class="contact-details col-md-6 col-xs-6">
@@ -159,12 +183,13 @@
 
                     <article>
                         <h1 key="reach-us-h1-second">...sem compromissos :)</h1>
-                        <h2 key="reach-us-h2-second">Texto motivando cliente a contactar </h2>
+                        <h2 key="reach-us-h2-second">Vamos ajudar-lhe a encontrar a melhor solução.</h2>
                     </article>
 
                     <ul>
                         <li>
-                            <i class="fa fa-phone"></i><span class="align-fix">+351 925 595 027</span>
+                            <i class="fa fa-phone"></i>
+                            <span class="align-fix">+351 925 595 027<br>+351 926 967 366</span>
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i><a href="mailto:contato@studiotagus.com"><span>contato@studiotagus.com</span></a>
@@ -179,14 +204,15 @@
                 </div>
 
                 <form class="send-message col-md-6 col-xs-6" action="MAILTO:andre.dargains@gmail.com" method="post" enctype="text/plain">
-                    <input type="text" name="nome" placeholder="Nome *">
-                    <input type="email" name="nome" placeholder="E-mail *">
-                    <textarea name="msg" placeholder="Mensagem"></textarea>
-                    <input type="submit" class="btn-dark">
+                    <input key="placeholder-name" type="text" name="nome" placeholder="Nome *">
+                    <input key="placeholder-email" type="email" name="nome" placeholder="E-mail *">
+                    <textarea key="placeholder-msg" name="msg" placeholder="Mensagem"></textarea>
+                    <input key="placeholder-" type="submit" class="btn-accent">
                 </form>
             </div>
         </div>
     </section>
+    <!-- CONTACT END -->
     <section class="footer">
         <div class="container">
             <div class="row">
