@@ -1,0 +1,26 @@
+.return-btn {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+    width: 100px;
+    height: 80px;
+    background-color: $accent-color;
+    border-bottom-right-radius: 100%;
+    @include breakpoint(xs-all) {
+        width: 70px;
+        height: 60px;
+    }
+    &:active {
+        i {
+            opacity: 0.8
+        }
+    }
+    i {
+        left: 34%;
+        top: 25%;
+        color: $primary-color-text;
+    }
+}

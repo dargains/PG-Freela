@@ -68,7 +68,11 @@ $(document).ready(function () {
         $page.removeClass('shazam');
     });
 
-
+    /* ~~~~~~~~~~~ MENU EXIT (portfolio) ~~~~~~~~~~~~ */
+    
+    $('.return-btn').on('click', function(){
+       window.history.back();
+    });
 
 
     var goTo = function (clicked, dest) {

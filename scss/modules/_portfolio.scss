@@ -9,6 +9,18 @@
             article {
                 margin: 50px 0;
                 overflow: hidden;
+                h1{
+   
+                    @include font("Oswald-Light", 36px, $primary-text-color, normal);
+                }
+                h2{
+                    @include font("Oswald-Regular", 26px, $primary-text-color, normal);
+                    margin-bottom: 20px;
+                }
+                p{
+                    @include font("OpenSans-Regular", 14px, $secondary-text-color, normal);
+                    line-height: 170%;
+                }
                 h1,
                 h2,
                 p {
