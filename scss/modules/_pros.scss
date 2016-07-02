@@ -3,12 +3,14 @@
     background: $background-color-light;
     .container {
         article {
-            min-height: 480px;
+            min-height: 505px;
             border-right: 1px solid $background-color-dark;
             border-bottom: 1px solid $background-color-dark;
+            
+
 
             @include breakpoint(sm) {
-                min-height: auto;
+                min-height: 420px;
                 border-bottom: 1px solid $background-color-dark;
                 &:nth-child(2) {
                     border-right: none;
@@ -22,7 +24,6 @@
                 border-right: none;
             }
             div {
-     
                 padding: 0;
                 margin: 0 10px;
                 margin-top: 60px;
@@ -35,16 +36,16 @@
                     @include font("Oswald-Light", 28px, $primary-text-color, normal);
                     letter-spacing: 3px;
                     text-transform: uppercase;
-                    padding-bottom: 15px;
+                    padding-bottom: 25px;
                 }
                 p {
-                    min-height: 140px;
                     line-height: 160%;
                     @include font("OpenSans-Regular", 14px, $secondary-text-color, normal);
                     letter-spacing: 1px;
-                    @include breakpoint(sm) {
-                        
+                    @include breakpoint (md) {
+                        min-height: auto;
                     }
+                    @include breakpoint(sm) {}
                     @include breakpoint(xs-all) {
                         min-height: auto;
                     }
