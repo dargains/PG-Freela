@@ -124,7 +124,10 @@ $(document).ready(function () {
                 url: "form-handler.php",
                 data: dataString,
                 success: function() {
-                    $('.form-message').html("Mensagem enviada com sucesso").addClass("success").hide().fadeIn(1500);
+                    $('.form-message').html("Mensagem enviada com sucesso. Entraremos em contato em breve.").addClass("success").hide().fadeIn(1500);
+                },
+                error: function() {
+                    $('.form-message').html("Ocorreu algum erro no envio. Por favor tente novamente.").addClass("failure").hide().fadeIn(1500);
                 }
             });
             return false; //evita que a página de refresh

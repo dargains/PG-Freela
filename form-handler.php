@@ -2,7 +2,7 @@
 $name = $_POST['name'];
 $email_address = $_POST['email'];
 $message = $_POST['message'];
-$myemail = 'contato@studiotagus.com';
+$myemail = 'contato@studiotagus.com,andredargains@gmail.com,diego.boarutto.fortes@gmail.com';
 
 $email_subject = "Contato de $name";
 $email_body = "Name: $name \n ".
