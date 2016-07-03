@@ -111,6 +111,12 @@ $(document).ready(function () {
     goTo('.drop-from-hero', "#about-start");
     goTo(".drop-to-contact", "#contact-start");
 
+    /* ----------- FORM --------------*/
+    var frmvalidator  = new Validator("contact_form");
+    frmvalidator.addValidation("name","req","Por favor escreva o seu nome.");
+    frmvalidator.addValidation("email","req","Por favor escreva o seu e-mail");
+    frmvalidator.addValidation("email","email","Por favor escreva um e-mail válido.");
+
     /* ----------- FOOTER -------------- */
     $('.click-heart').on('click', function () {
         $(this).addClass("animated-heart").delay(300).queue(function (next) {

@@ -393,10 +393,10 @@
                         </ul>
                     </div>
 
-                    <form class="send-message col-md-6 col-xs-6" action="MAILTO:andre.dargains@gmail.com" method="post" enctype="text/plain">
-                        <input key="placeholder-name" type="text" name="nome" placeholder="Nome *">
-                        <input key="placeholder-email" type="email" name="nome" placeholder="E-mail *">
-                        <textarea key="placeholder-msg" name="msg" placeholder="Mensagem"></textarea>
+                    <form name="contact_form" class="send-message col-md-6 col-xs-6" action="form-handler.php" method="post" enctype="text/plain">
+                        <input key="placeholder-name" type="text" name="name" placeholder="Nome *" required>
+                        <input key="placeholder-email" type="email" name="email" placeholder="E-mail *" required>
+                        <textarea key="placeholder-msg" name="message" placeholder="Mensagem" required></textarea>
                         <input key="placeholder-" type="submit" class="btn-accent">
                     </form>
                 </div>
