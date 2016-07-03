@@ -22,5 +22,9 @@
         left: 34%;
         top: 25%;
         color: $primary-color-text;
+        @include breakpoint(xs-all) {
+            left: 28%;
+            top: 24%;
+        }
     }
 }
