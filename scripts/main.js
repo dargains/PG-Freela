@@ -114,7 +114,6 @@ $(document).ready(function () {
     /* ----------- FORM --------------*/
     $(function () {
         $('form').on('submit', function (e) {
-            e.preventDefault(); //evita que a página de refresh
             var name = $("input#name").val(),
                 email = $("input#email").val(),
                 message = $("textarea#message").val(),
@@ -125,11 +124,10 @@ $(document).ready(function () {
                 url: "form-handler.php",
                 data: dataString,
                 success: function() {
-                    $('#contact_form').html("<div id='message'></div>");
-                    $('#message').html("<h2>Contact Form Submitted!</h2>").append("<p>We will be in touch soon.</p>").hide().fadeIn(1500);
+                    $('.form-message').html("Mensagem enviada com sucesso").addClass("success").hide().fadeIn(1500);
                 }
             });
-            return false;
+            return false; //evita que a página de refresh
         });
       });
 
