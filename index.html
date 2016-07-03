@@ -347,7 +347,7 @@
 
 
         <!-- CONTACT START -->
-        <section class="contact">
+        <section class="contact" id="form">
             <span id="contact-start"></span>
 
             <section class="title-subtitle ts-center">
@@ -393,13 +393,18 @@
                         </ul>
                     </div>
 
-                    <form name="contact_form" class="send-message col-md-6 col-xs-6" action="form-handler.php" method="post" enctype="text/plain">
-                        <input key="placeholder-name" type="text" name="name" placeholder="Nome *" required>
-                        <input key="placeholder-email" type="email" name="email" placeholder="E-mail *" required>
-                        <textarea key="placeholder-msg" name="message" placeholder="Mensagem" required></textarea>
-                        <input key="placeholder-" type="submit" class="btn-accent">
+                    <div id="contact_form">
+                    <form name="contact_form" class="send-message col-md-6 col-xs-6" action="" method="" enctype="text/plain">
+                        <input key="placeholder-name" type="text" name="name" id="name" placeholder="Nome *" required>
+                        <input key="placeholder-email" type="email" name="email" id="email" placeholder="E-mail *" required>
+                        <textarea key="placeholder-msg" name="message" id="message" placeholder="Mensagem" required></textarea>
+                        <input key="placeholder-" type="submit" class="btn-accent" id="submit_btn">
                     </form>
+                    </div>
+
+
                 </div>
+                <div class="form-message"></div>
             </div>
         </section>
         <!-- CONTACT END -->

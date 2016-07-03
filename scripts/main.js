@@ -112,10 +112,26 @@ $(document).ready(function () {
     goTo(".drop-to-contact", "#contact-start");
 
     /* ----------- FORM --------------*/
-    var frmvalidator  = new Validator("contact_form");
-    frmvalidator.addValidation("name","req","Por favor escreva o seu nome.");
-    frmvalidator.addValidation("email","req","Por favor escreva o seu e-mail");
-    frmvalidator.addValidation("email","email","Por favor escreva um e-mail válido.");
+    $(function () {
+        $('form').on('submit', function (e) {
+            e.preventDefault(); //evita que a página de refresh
+            var name = $("input#name").val(),
+                email = $("input#email").val(),
+                message = $("textarea#message").val(),
+                dataString = 'name='+ name + '&email=' + email + '&message=' + message;
+            //alert (dataString);return false;
+            $.ajax({
+                type: "POST",
+                url: "form-handler.php",
+                data: dataString,
+                success: function() {
+                    $('#contact_form').html("<div id='message'></div>");
+                    $('#message').html("<h2>Contact Form Submitted!</h2>").append("<p>We will be in touch soon.</p>").hide().fadeIn(1500);
+                }
+            });
+            return false;
+        });
+      });
 
     /* ----------- FOOTER -------------- */
     $('.click-heart').on('click', function () {
