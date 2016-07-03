@@ -166,12 +166,15 @@
                     </ul>
                 </div>
 
-                <form class="send-message col-md-6 col-xs-6" action="MAILTO:andre.dargains@gmail.com" method="post" enctype="text/plain">
-                    <input key="placeholder-name" type="text" name="nome" placeholder="Nome *">
-                    <input key="placeholder-email" type="email" name="nome" placeholder="E-mail *">
-                    <textarea key="placeholder-msg" name="msg" placeholder="Mensagem"></textarea>
-                    <input key="placeholder-" type="submit" class="btn-accent">
+                <form name="contact_form" class="send-message col-md-6 col-xs-6" action="" method="" enctype="text/plain">
+                    <input key="placeholder-name" type="text" name="name" id="name" placeholder="Nome *" required>
+                    <input key="placeholder-email" type="email" name="email" id="email" placeholder="E-mail *" required>
+                    <textarea key="placeholder-msg" name="message" id="message" placeholder="Mensagem" required></textarea>
+                    <input key="placeholder-" type="submit" class="btn-accent" id="submit_btn">
                 </form>
+
+                </div>
+                <div class="form-message"></div>
             </div>
         </div>
     </section>
