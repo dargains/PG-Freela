@@ -121,7 +121,7 @@ $(document).ready(function () {
             //alert (dataString);return false;
             $.ajax({
                 type: "POST",
-                url: "form-handler.php",
+                url: "http://studiotagus.com/form-handler.php",
                 data: dataString,
                 success: function() {
                     $('.form-message').html("Mensagem enviada com sucesso. Entraremos em contato em breve.").addClass("success").hide().fadeIn(1500);
