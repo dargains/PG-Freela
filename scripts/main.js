@@ -268,7 +268,7 @@ $(document).ready(function () {
 
 
 
-    var lang = "pt";
+    var lang = "en";
     console.log(lang);
     // onclick behavior
     $('.lang').click(function () {
