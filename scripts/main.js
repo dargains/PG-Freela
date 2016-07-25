@@ -69,35 +69,27 @@ $(document).ready(function () {
     });
 
     /* ~~~~~~~~~~~ MENU EXIT (portfolio) ~~~~~~~~~~~~ */
-    
-    $('.return-btn').on('click', function(){
-       window.history.back();
+
+    $('.return-btn').on('click', function () {
+        window.history.back();
     });
 
 
     var goTo = function (clicked, dest) {
         $(clicked).on('click', function (e) {
-            var stopScrollOn = "scroll wheel DOMMouseScroll mousewheel touchmove";
 
             $page.removeClass('shazam');
 
-
-            enableScroll();
-            //prevent the default action, which is to visit the href attribute and go to the top
             e.preventDefault();
 
-            $('html, body').on(stopScrollOn, function () {
+            var target = this.hash;
+            var $target = $(target);
 
-                $('html, body').stop();
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = target;
             });
-
-            $('html, body').stop(true, false).animate({
-                scrollTop: $(dest).offset().top
-            }, 1500, function () {
-                $('html, body').off(stopScrollOn);
-                $('html, body').stop();
-            });
-
         });
     }
 
@@ -114,25 +106,25 @@ $(document).ready(function () {
     /* ----------- FORM --------------*/
     $(function () {
         $('form').on('submit', function (e) {
-            var name = $("input#name").val(),
-                email = $("input#email").val(),
-                message = $("textarea#message").val(),
-                dataString = 'name='+ name + '&email=' + email + '&message=' + message;
+            var name = $("input#name").val()
+                , email = $("input#email").val()
+                , message = $("textarea#message").val()
+                , dataString = 'name=' + name + '&email=' + email + '&message=' + message;
             //alert (dataString);return false;
             $.ajax({
-                type: "POST",
-                url: "http://studiotagus.com/form-handler.php",
-                data: dataString,
-                success: function() {
+                type: "POST"
+                , url: "http://studiotagus.com/form-handler.php"
+                , data: dataString
+                , success: function () {
                     $('.form-message').html("Mensagem enviada com sucesso. Entraremos em contato em breve.").addClass("success").hide().fadeIn(1500);
-                },
-                error: function() {
+                }
+                , error: function () {
                     $('.form-message').html("Ocorreu algum erro no envio. Por favor tente novamente.").addClass("failure").hide().fadeIn(1500);
                 }
             });
             return false; //evita que a página de refresh
         });
-      });
+    });
 
     /* ----------- FOOTER -------------- */
     $('.click-heart').on('click', function () {
